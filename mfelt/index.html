@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MFELT - My Front-End Librairy Toolkit</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="assets/favicon.png" rel="icon" type="images/png" />
+		<link href="assets/docs.css" rel="stylesheet">
+		<link href="assets/mfelt/css/mfelt.css" rel="stylesheet">
+		<script src="assets/mfelt/js/mfelt.js"></script>
+		<link href="assets/prism.min.css" rel="stylesheet" >
+		<script src="assets/prism.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="padding"></div>
+			<div id="logozone">MFELT</div><div>My Front-End Librairy Toolkit</div>
+			<div class="padding"></div>
+		</header>
+		<div id="content">
+			<div class="padding"></div>
+			<nav id='sidebar'>
+				<ul>
+					<li><a href="#intro">Introduction</a></li>
+					<li>
+						<a href="#buttons">Buttons</a>
+						<ul>
+							<li><a href="#buttons-bases">Base classes</a></li>
+							<li><a href="#buttons-sizes">Sizes</a></li>
+							<li><a href="#buttons-blocks">Block buttons</a></li>
+						</ul>
+					</li>
+					<li><a href="#buttons-groups">Buttons groups</a></li>
+					<li><a href="#buttons-toolbars">Buttons toolbars</a></li>
+					<li><a href="#navbars">Navbars menus *</a></li>
+					<li><a href="#titleboxes">Title boxes</a></li>
+					<li>
+						<a href="#forms">Forms</a>
+						<ul>
+							<li><a href="#forms-controls">Controls and labels</a></li>
+							<li><a href="#forms-inline">Inline</a></li>
+							<li><a href="#forms-input-groups">Input groups</a></li>
+							<li><a href="#forms-modifiers">Modifiers</a></li>
+						</ul>
+					</li>
+					<li><a href="#alerts">Alerts *</a></li>
+					<li><a href="#accordions">Accordions *</a></li>
+					<li><a href="#tabs">Tabs *</a></li>
+					<li><a href="#modals">Modals *</a></li>
+					<li><a href="#paginations">Paginations</a></li>
+					<li><a href="#cards">Cards</a></li>
+					<li><a href="#colors">Colors</a></li>
+				</ul>
+			</nav>
+			
+			<main>
+				<section id="intro">
+					<h2>Introduction</h2>
+					MFELT is a css (with a little bit of javascript) librairy. It intend to be very simple to use and very stable (no new version every year that would force you to rewrite your applications).<br>
+					On the other hand, it doesn't offer to do everything, even coffee. But the essentials are there for most font-end developers.<br>
+					The principle is that a library should not include things that are rarely or only once done in an application.
+					That's why it doesn't include anything about layouts (html5 with flex and grid is mature enough for that) or sidebars (this is usually a main menu in your application that you'll only do once).<br>
+					For everything else, I hope you find mfelt useful.<br><br>
+					<b>Usage :</b><br><br>
+					1 - Download MFelt and drop it anywhere in your project so that it's accessible by clients (usually assets folder)<br>
+					2 - Add these lines to the header of your html files or html template for your project<br>
+					<pre><code class="language-html">&lt;link href=&quot;&lt;your_path_to_assets&gt;/mfelt/css/mfelt.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;&lt;your_path_to_assets&gt;/mfelt/js/mfelt.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+					MFELT also comes with icons wich are not documented here. It is a fork of bootstrap icons except that it not includes svg icons. Some examples below shows how it can be used.<br>
+					Elements in main menu with a * use javascript. Javascript in MFelt is pure js.
+				</section>
+				<section id="buttons">
+					<h2>Buttons</h2>
+					<h3 id="buttons-bases">Base classes</h3>
+					<button class="mf-button">Button</button>
+<button class="mf-button green">Button</button>
+<button class="mf-button orange">Button</button>
+<button class="mf-button red">Button</button>
+<button class="mf-button blue">Button</button>
+<button class="mf-button black">Button</button>
+<pre><code class="language-html">&lt;button class=&quot;mf-button&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button green&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button orange&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button red&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button blue&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button black&quot;&gt;Button&lt;/button&gt;
+</code></pre>
+					<b>With</b> <code>disabled</code> attribute<br>
+					<button class="mf-button" disabled>Button</button>
+<button class="mf-button green" disabled>Button</button>
+<button class="mf-button orange" disabled>Button</button>
+<button class="mf-button red" disabled>Button</button>
+<button class="mf-button blue" disabled>Button</button>
+<button class="mf-button black" disabled>Button</button>
+<pre><code class="language-html">&lt;button class=&quot;mf-button&quot; disabled&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button green&quot; disabled&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button orange&quot; disabled&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button red&quot; disabled&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button blue&quot; disabled&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button black&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre>
+					<b>Adding</b> <code>rounded</code> class<br>
+					<button class="mf-button rounded">Button</button>
+<button class="mf-button green rounded">Button</button>
+<button class="mf-button orange rounded">Button</button>
+<button class="mf-button red rounded">Button</button>
+<button class="mf-button blue rounded">Button</button>
+<button class="mf-button black rounded">Button</button>
+<pre><code class="language-html">&lt;button class=&quot;mf-button rounded&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button green rounded&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button orange rounded&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button red rounded&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button blue rounded&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;mf-button black rounded&quot;&gt;Button&lt;/button&gt;
+</code></pre>
+					<h3 id="buttons-sizes">Sizes</h3>
+					<button class="mf-button large">Large button</button>
+<button class="mf-button">Default button</button>
+<button class="mf-button small">Small button</button>
+<pre><code class="language-html">&lt;button class=&quot;mf-button large&quot;&gt;Large button&lt;/button&gt;
+&lt;button class=&quot;mf-button&quot;&gt;Default button&lt;/button&gt;
+&lt;button class=&quot;mf-button small&quot;&gt;Small button&lt;/button&gt;
+</code></pre>
+					<h3 id="buttons-blocks">Block buttons</h3>
+					Block buttons are full width of their container
+					<div style='width:33%; background-color: #f8f8f8; padding: 20px;'>
+	<input type='submit' class='mf-button block' value="Submit">
+</div>
+<br>
+<div style='width:50%; background-color: #f8f8f8; padding: 20px;'>
+	<input type='submit' class='mf-button block' value="Submit">
+</div>
+<pre><code class="language-html">&lt;div style=&#039;width:33%; background-color: #f8f8f8; padding: 20px;&#039;&gt;
+	&lt;input type=&#039;submit&#039; class=&#039;mf-button block&#039; value=&quot;Submit&quot;&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div style=&#039;width:50%; background-color: #f8f8f8; padding: 20px;&#039;&gt;
+	&lt;input type=&#039;submit&#039; class=&#039;mf-button block&#039; value=&quot;Submit&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+				</section>
+				
+				<section id="buttons-groups">
+					<h2>Buttons groups</h2>
+					<div class='mf-buttons-group'>
+	<button class="mf-button">Button1</button>
+	<button class="mf-button">Button2</button>
+	<button class="mf-button">Button3</button>
+	<button class="mf-button">Button4</button>
+</div>
+<pre><code class="language-html">&lt;div class=&#039;mf-buttons-group&#039;&gt;
+	&lt;button class=&quot;mf-button&quot;&gt;Button1&lt;/button&gt;
+	&lt;button class=&quot;mf-button&quot;&gt;Button2&lt;/button&gt;
+	&lt;button class=&quot;mf-button&quot;&gt;Button3&lt;/button&gt;
+	&lt;button class=&quot;mf-button&quot;&gt;Button4&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+					<br>
+					With <code>class="block"</code>, the group occupy the width of its container
+					<div style='width:50%; background-color: #f8f8f8; padding:20px'>
+	<div class='mf-buttons-group block'>
+		<button class="mf-button">Button1</button>
+		<button class="mf-button">Button2</button>
+		<button class="mf-button">Button3</button>
+	</div>
+</div>
+<pre><code class="language-html">&lt;div style=&#039;width:50%; background-color: #f8f8f8; padding:20px&#039;&gt;
+	&lt;div class=&#039;mf-buttons-group block&#039;&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;Button1&lt;/button&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;Button2&lt;/button&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;Button3&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+				</section>
+				
+				<section id="buttons-toolbars">
+					<h2>Buttons toolbars</h2>
+					<div class='mf-buttons-toolbar'>
+	<div class='mf-buttons-group'>
+		<button class="mf-button"><span class='mfi mfi-file-earmark-text-fill'></span></button>
+		<button class="mf-button"><span class='mfi mfi-save'></span></button>
+	</div>
+	<button class="mf-button">Button1</button>
+	<div class='mf-buttons-group'>
+		<button class="mf-button"><span class='mfi mfi-type-bold'></span></button>
+		<button class="mf-button"><span class='mfi mfi-type-italic'></span></button>
+		<button class="mf-button"><span class='mfi mfi-type-underline'></span></button>
+	</div>
+	<div class='mf-buttons-group'>
+		<button class="mf-button"><span class='mfi mfi-text-left'></span></button>
+		<button class="mf-button"><span class='mfi mfi-text-center'></span></button>
+		<button class="mf-button"><span class='mfi mfi-text-right'></span></button>
+	</div>
+</div>
+<pre><code class="language-html">&lt;div class=&#039;mf-buttons-toolbar&#039;&gt;
+	&lt;div class=&#039;mf-buttons-group&#039;&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&#039;mfi mfi-file-earmark-text-fill&#039;&gt;&lt;/span&gt;&lt;/button&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&#039;mfi mfi-save&#039;&gt;&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;button class=&quot;mf-button&quot;&gt;Button1&lt;/button&gt;
+	&lt;div class=&#039;mf-buttons-group&#039;&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&#039;mfi mfi-type-bold&#039;&gt;&lt;/span&gt;&lt;/button&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&#039;mfi mfi-type-italic&#039;&gt;&lt;/span&gt;&lt;/button&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&#039;mfi mfi-type-underline&#039;&gt;&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;div class=&#039;mf-buttons-group&#039;&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&#039;mfi mfi-text-left&#039;&gt;&lt;/span&gt;&lt;/button&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&#039;mfi mfi-text-center&#039;&gt;&lt;/span&gt;&lt;/button&gt;
+		&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&#039;mfi mfi-text-right&#039;&gt;&lt;/span&gt;&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+				</section>
+				
+				<section id="navbars">
+					<h2>Navbars menus</h2>
+					Navbars are simple to write responsive menus. Its a two levels max menus.<br>
+					Try reduce the browser window size to see it in action.<br><br>
+					<nav class="mf-nav" id="example_navbar">
+	<div class="navbar-header">
+		<span class="title">
+			Active menu title
+		</span>
+		<button class="toggle-button">
+			<span class="mfi mfi-list"></span>
+		</button>
+	</div>
+	<div class="navbar">
+		<ul>
+			<li class="dropdown">
+				<a>
+					Dropdown title
+				</a>
+				<div class="dropdown-content">
+					<a href="#example_navbar">Link 1</a>
+					<a href="#example_navbar">Link 2</a>
+				</div>
+			</li>
+			<li class="active">
+				<a>Active menu entry</a>
+			</li>
+			<li class="right">
+				<a href="#example_navbar">Menu entry on right</a>
+			</li>
+			<li>
+				<a href="#example_navbar">Other on right</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<pre><code class="language-html">&lt;nav class=&quot;mf-nav&quot; id=&quot;example_navbar&quot;&gt;
+	&lt;div class=&quot;navbar-header&quot;&gt;
+		&lt;span class=&quot;title&quot;&gt;
+			Active menu title
+		&lt;/span&gt;
+		&lt;button class=&quot;toggle-button&quot;&gt;
+			&lt;span class=&quot;mfi mfi-list&quot;&gt;&lt;/span&gt;
+		&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;navbar&quot;&gt;
+		&lt;ul&gt;
+			&lt;li class=&quot;dropdown&quot;&gt;
+				&lt;a&gt;
+					Dropdown title
+				&lt;/a&gt;
+				&lt;div class=&quot;dropdown-content&quot;&gt;
+					&lt;a href=&quot;#example_navbar&quot;&gt;Link 1&lt;/a&gt;
+					&lt;a href=&quot;#example_navbar&quot;&gt;Link 2&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;active&quot;&gt;
+				&lt;a&gt;Active menu entry&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;right&quot;&gt;
+				&lt;a href=&quot;#example_navbar&quot;&gt;Menu entry on right&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href=&quot;#example_navbar&quot;&gt;Other on right&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+				</section>
+				
+				<section id="titleboxes">
+					<h2>Title boxes</h2>
+					<div class="mf-title-box">
+	<span>A title</span>
+	<div>
+		A sample content<br>
+		On multiple lines<br>
+		For demo purpose
+	</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;mf-title-box&quot;&gt;
+	&lt;span&gt;A title&lt;/span&gt;
+	&lt;div&gt;
+		A sample content&lt;br&gt;
+		On multiple lines&lt;br&gt;
+		For demo purpose
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+				</section>
+				
+				<section id="forms">
+					<h2>Forms</h2>
+					<h3 id="forms-controls">Controls and labels</h3>
+					This is applicable with any kind of inputs (email, password, datetime, datetime-local, date, month, time, week, number, url, search, tel, color)
+					<label for="inputText" class="mf-form-label">Text type input label</label>
+<input type="text" id='inputText' class="mf-form-control" placeholder="Default input" />
+
+<label for="select" class="mf-form-label">Select label</label>
+<select id='select' class="mf-form-control">
+	<option value="value1">Value one</option>
+	<option value="value2">Value two</option>
+	<option value="value3">Value three</option>
+</select>
+<label for="selectMulti" class="mf-form-label">Select multiple with size</label>
+<select id='selectMulti' class="mf-form-control" multiple="" size="3">
+	<option value="value1">Value one</option>
+	<option value="value2">Value two</option>
+	<option value="value3">Value three</option>
+	<option value="value4">Value four</option>
+</select>
+
+<span class="mf-form-label">Checkboxes</span>
+<div class="mf-form-control">
+	<input type="checkbox" id="check1" />
+	<label for="check1">Checkbox 1</label>
+	<input type="checkbox" id="check2" />
+	<label for="check2">Checkbox 2</label>
+</div>
+
+<span class="mf-form-label">Checkboxes stacked</span>
+<div class="mf-form-control stack">
+	<input type="checkbox" id="check1stacked" />
+	<label for="check1stacked">Checkbox 1</label>
+	<input type="checkbox" id="check2stacked" />
+	<label for="check2stacked">Checkbox 2</label>
+</div>
+
+<span class="mf-form-label">Radios stacked</span>
+<div class="mf-form-control stack">
+	<input type="radio" id="radio1stacked" name="radioExample"/>
+	<label for="radio1stacked">Radio 1</label>
+	<input type="radio" id="radio2stacked" name="radioExample"/>
+	<label for="radio2stacked">Radio 2</label>
+</div>
+
+<label for="color" class="mf-form-label">Choose a color</label>
+<input type="color" id='color' class="mf-form-control" />
+
+<label for="file" class="mf-form-label">Choose a file</label>
+<input type="file" id='file' class="mf-form-control" />
+
+<span class="mf-form-label">Choose a file</span>
+<div class="mf-form-file-control">
+  <input type="file" id="fileInput">
+  <label for="fileInput">Choisir un fichier</label>
+</div>
+<pre><code class="language-html">&lt;label for=&quot;inputText&quot; class=&quot;mf-form-label&quot;&gt;Text type input label&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&#039;inputText&#039; class=&quot;mf-form-control&quot; placeholder=&quot;Default input&quot; /&gt;
+
+&lt;label for=&quot;select&quot; class=&quot;mf-form-label&quot;&gt;Select label&lt;/label&gt;
+&lt;select id=&#039;select&#039; class=&quot;mf-form-control&quot;&gt;
+	&lt;option value=&quot;value1&quot;&gt;Value one&lt;/option&gt;
+	&lt;option value=&quot;value2&quot;&gt;Value two&lt;/option&gt;
+	&lt;option value=&quot;value3&quot;&gt;Value three&lt;/option&gt;
+&lt;/select&gt;
+&lt;label for=&quot;selectMulti&quot; class=&quot;mf-form-label&quot;&gt;Select multiple with size&lt;/label&gt;
+&lt;select id=&#039;selectMulti&#039; class=&quot;mf-form-control&quot; multiple=&quot;&quot; size=&quot;3&quot;&gt;
+	&lt;option value=&quot;value1&quot;&gt;Value one&lt;/option&gt;
+	&lt;option value=&quot;value2&quot;&gt;Value two&lt;/option&gt;
+	&lt;option value=&quot;value3&quot;&gt;Value three&lt;/option&gt;
+	&lt;option value=&quot;value4&quot;&gt;Value four&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;span class=&quot;mf-form-label&quot;&gt;Checkboxes&lt;/span&gt;
+&lt;div class=&quot;mf-form-control&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; /&gt;
+	&lt;label for=&quot;check1&quot;&gt;Checkbox 1&lt;/label&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;check2&quot; /&gt;
+	&lt;label for=&quot;check2&quot;&gt;Checkbox 2&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;span class=&quot;mf-form-label&quot;&gt;Checkboxes stacked&lt;/span&gt;
+&lt;div class=&quot;mf-form-control stack&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;check1stacked&quot; /&gt;
+	&lt;label for=&quot;check1stacked&quot;&gt;Checkbox 1&lt;/label&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;check2stacked&quot; /&gt;
+	&lt;label for=&quot;check2stacked&quot;&gt;Checkbox 2&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;span class=&quot;mf-form-label&quot;&gt;Radios stacked&lt;/span&gt;
+&lt;div class=&quot;mf-form-control stack&quot;&gt;
+	&lt;input type=&quot;radio&quot; id=&quot;radio1stacked&quot; name=&quot;radioExample&quot;/&gt;
+	&lt;label for=&quot;radio1stacked&quot;&gt;Radio 1&lt;/label&gt;
+	&lt;input type=&quot;radio&quot; id=&quot;radio2stacked&quot; name=&quot;radioExample&quot;/&gt;
+	&lt;label for=&quot;radio2stacked&quot;&gt;Radio 2&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;label for=&quot;color&quot; class=&quot;mf-form-label&quot;&gt;Choose a color&lt;/label&gt;
+&lt;input type=&quot;color&quot; id=&#039;color&#039; class=&quot;mf-form-control&quot; /&gt;
+
+&lt;label for=&quot;file&quot; class=&quot;mf-form-label&quot;&gt;Choose a file&lt;/label&gt;
+&lt;input type=&quot;file&quot; id=&#039;file&#039; class=&quot;mf-form-control&quot; /&gt;
+
+&lt;span class=&quot;mf-form-label&quot;&gt;Choose a file&lt;/span&gt;
+&lt;div class=&quot;mf-form-file-control&quot;&gt;
+  &lt;input type=&quot;file&quot; id=&quot;fileInput&quot;&gt;
+  &lt;label for=&quot;fileInput&quot;&gt;Choisir un fichier&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+					<h3 id="forms-inline">Inline</h3>
+					<label for="inputTextInline" class="mf-form-label inline">Input label</label>
+<input type="text" id='inputTextInline' class="mf-form-control" placeholder="Default input" />
+<pre><code class="language-html">&lt;label for=&quot;inputTextInline&quot; class=&quot;mf-form-label inline&quot;&gt;Input label&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&#039;inputTextInline&#039; class=&quot;mf-form-control&quot; placeholder=&quot;Default input&quot; /&gt;
+</code></pre>
+					<h3 id="forms-input-groups">Input groups</h3>
+					<div class='mf-form-input-group'>
+	<input type='text' class="mf-form-control" name='myInput' placeholder="write here" />
+	<button class="mf-button"><span class="mfi-search"></span></button>
+</div>
+
+<div class='mf-form-input-group'>
+	<button class="mf-button">Search</button>
+	<input type='text' class="mf-form-control" name='myInput' placeholder="write here" />
+</div>
+
+<div class='mf-form-input-group'>
+	<input type='text' class="mf-form-control" name='myInput' placeholder="Your identifier" />
+	<span class="mf-form-input-addon">@my-corp.org</span>
+</div>
+
+<label for="selectInGroup" class="mf-form-label">Gift</label>
+<div class='mf-form-input-group'>
+	<span class="mf-form-input-addon mfi-currency-dollar"></span>
+	<select class="mf-form-control" name='myInput' id='selectInGroup'>
+		<option value="100">100.00</option>
+		<option value="200">200.00</option>
+	</select>
+</div>
+
+<label for="inputNumberInGroup" class="mf-form-label inline">Price</label>
+<div class='mf-form-input-group'>
+	<span class="mf-form-input-addon mfi-currency-dollar"></span>
+	<input type='number' class="mf-form-control" id='inputNumberInGroup' />
+	<span class="mf-form-input-addon">.00</span>
+</div>
+
+<div class='mf-form-input-group'>
+	<span class="mf-form-input-addon">With textarea</span>
+	<textarea class="mf-form-control" id='textareaInGroup'></textarea>
+</div>
+<pre><code class="language-html">&lt;div class=&#039;mf-form-input-group&#039;&gt;
+	&lt;input type=&#039;text&#039; class=&quot;mf-form-control&quot; name=&#039;myInput&#039; placeholder=&quot;write here&quot; /&gt;
+	&lt;button class=&quot;mf-button&quot;&gt;&lt;span class=&quot;mfi-search&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class=&#039;mf-form-input-group&#039;&gt;
+	&lt;button class=&quot;mf-button&quot;&gt;Search&lt;/button&gt;
+	&lt;input type=&#039;text&#039; class=&quot;mf-form-control&quot; name=&#039;myInput&#039; placeholder=&quot;write here&quot; /&gt;
+&lt;/div&gt;
+
+&lt;div class=&#039;mf-form-input-group&#039;&gt;
+	&lt;input type=&#039;text&#039; class=&quot;mf-form-control&quot; name=&#039;myInput&#039; placeholder=&quot;Your identifier&quot; /&gt;
+	&lt;span class=&quot;mf-form-input-addon&quot;&gt;@my-corp.org&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;label for=&quot;selectInGroup&quot; class=&quot;mf-form-label&quot;&gt;Gift&lt;/label&gt;
+&lt;div class=&#039;mf-form-input-group&#039;&gt;
+	&lt;span class=&quot;mf-form-input-addon mfi-currency-dollar&quot;&gt;&lt;/span&gt;
+	&lt;select class=&quot;mf-form-control&quot; name=&#039;myInput&#039; id=&#039;selectInGroup&#039;&gt;
+		&lt;option value=&quot;100&quot;&gt;100.00&lt;/option&gt;
+		&lt;option value=&quot;200&quot;&gt;200.00&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/div&gt;
+
+&lt;label for=&quot;inputNumberInGroup&quot; class=&quot;mf-form-label inline&quot;&gt;Price&lt;/label&gt;
+&lt;div class=&#039;mf-form-input-group&#039;&gt;
+	&lt;span class=&quot;mf-form-input-addon mfi-currency-dollar&quot;&gt;&lt;/span&gt;
+	&lt;input type=&#039;number&#039; class=&quot;mf-form-control&quot; id=&#039;inputNumberInGroup&#039; /&gt;
+	&lt;span class=&quot;mf-form-input-addon&quot;&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&#039;mf-form-input-group&#039;&gt;
+	&lt;span class=&quot;mf-form-input-addon&quot;&gt;With textarea&lt;/span&gt;
+	&lt;textarea class=&quot;mf-form-control&quot; id=&#039;textareaInGroup&#039;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre>
+					<h3 id="forms-modifiers">Modifiers</h3>
+					<label for="inputTexDisabled" class="mf-form-label">Disabled text type input label</label>
+<input type="text" id='inputText' class="mf-form-control" value="A value for information" disabled/>
+
+<span class="mf-form-label">Disabled checkboxes</span>
+<div class="mf-form-control disabled">
+	<input type="checkbox" id="check11" checked disabled/>
+	<label for="check11">Checkbox 1</label>
+	<input type="checkbox" id="check12" disabled />
+	<label for="check12">Checkbox 2</label>
+</div>
+
+<label for="inputTextInError" class="mf-form-label">Label of an input on error</label>
+<input type="text" id='inputTextInError' class="mf-form-control error" value="An incorrect value" />
+
+<label for="selectRequired" class="mf-form-label required">Required select label</label>
+<select id='selectRequired' class="mf-form-control">
+	<option value="value1">Value one</option>
+	<option value="value2">Value two</option>
+	<option value="value3">Value three</option>
+</select>
+<pre><code class="language-html">&lt;label for=&quot;inputTexDisabled&quot; class=&quot;mf-form-label&quot;&gt;Disabled text type input label&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&#039;inputText&#039; class=&quot;mf-form-control&quot; value=&quot;A value for information&quot; disabled/&gt;
+
+&lt;span class=&quot;mf-form-label&quot;&gt;Disabled checkboxes&lt;/span&gt;
+&lt;div class=&quot;mf-form-control disabled&quot;&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;check11&quot; checked disabled/&gt;
+	&lt;label for=&quot;check11&quot;&gt;Checkbox 1&lt;/label&gt;
+	&lt;input type=&quot;checkbox&quot; id=&quot;check12&quot; disabled /&gt;
+	&lt;label for=&quot;check12&quot;&gt;Checkbox 2&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;label for=&quot;inputTextInError&quot; class=&quot;mf-form-label&quot;&gt;Label of an input on error&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&#039;inputTextInError&#039; class=&quot;mf-form-control error&quot; value=&quot;An incorrect value&quot; /&gt;
+
+&lt;label for=&quot;selectRequired&quot; class=&quot;mf-form-label required&quot;&gt;Required select label&lt;/label&gt;
+&lt;select id=&#039;selectRequired&#039; class=&quot;mf-form-control&quot;&gt;
+	&lt;option value=&quot;value1&quot;&gt;Value one&lt;/option&gt;
+	&lt;option value=&quot;value2&quot;&gt;Value two&lt;/option&gt;
+	&lt;option value=&quot;value3&quot;&gt;Value three&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+				</section>
+				
+				<section id="alerts">
+					<h2>Alerts</h2>
+					<div class='mf-alert warning'>
+	Caution : this is an alert message !
+</div>
+<div class='mf-alert error'>
+	Error : an error occured !
+</div>
+<div class='mf-alert success'>
+	Well done !
+</div>
+<div class='mf-alert info'>
+	Additional info message here
+</div>
+<pre><code class="language-html">&lt;div class=&#039;mf-alert warning&#039;&gt;
+	Caution : this is an alert message !
+&lt;/div&gt;
+&lt;div class=&#039;mf-alert error&#039;&gt;
+	Error : an error occured !
+&lt;/div&gt;
+&lt;div class=&#039;mf-alert success&#039;&gt;
+	Well done !
+&lt;/div&gt;
+&lt;div class=&#039;mf-alert info&#039;&gt;
+	Additional info message here
+&lt;/div&gt;
+</code></pre>
+					<h3>Alerts with <code>class="block"</code></h3>
+					<div class='mf-alert block warning'>
+	<header>WARNING</header>
+	This is an alert message !
+</div>
+<div class='mf-alert block error'>
+	<header>ERROR</header>
+	An error occured !
+</div>
+<div class='mf-alert block success'>
+	<header>SUCCESS</header>
+	Everything is ok
+</div>
+<div class='mf-alert block info'>
+	<header>INFORMATION</header>
+	Additional info message here
+</div>
+<pre><code class="language-html">&lt;div class=&#039;mf-alert block warning&#039;&gt;
+	&lt;header&gt;WARNING&lt;/header&gt;
+	This is an alert message !
+&lt;/div&gt;
+&lt;div class=&#039;mf-alert block error&#039;&gt;
+	&lt;header&gt;ERROR&lt;/header&gt;
+	An error occured !
+&lt;/div&gt;
+&lt;div class=&#039;mf-alert block success&#039;&gt;
+	&lt;header&gt;SUCCESS&lt;/header&gt;
+	Everything is ok
+&lt;/div&gt;
+&lt;div class=&#039;mf-alert block info&#039;&gt;
+	&lt;header&gt;INFORMATION&lt;/header&gt;
+	Additional info message here
+&lt;/div&gt;
+</code></pre>
+					<h3>Dismissible alerts</code></h3>
+					<div class='mf-alert info dismissible'>
+	<div class="mf-alert-dismiss" data-mf-dismiss><span class="mfi-x-lg"></span></div>
+	An important information
+</div>
+
+<div class='mf-alert block success dismissible'>
+	<header>
+		SUCCESS
+		<div class="mf-alert-dismiss" data-mf-dismiss><span class="mfi-x-lg"></span></div>
+	</header>
+	A dismissible success message
+</div>
+<pre><code class="language-html">&lt;div class=&#039;mf-alert info dismissible&#039;&gt;
+	&lt;div class=&quot;mf-alert-dismiss&quot; data-mf-dismiss&gt;&lt;span class=&quot;mfi-x-lg&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+	An important information
+&lt;/div&gt;
+
+&lt;div class=&#039;mf-alert block success dismissible&#039;&gt;
+	&lt;header&gt;
+		SUCCESS
+		&lt;div class=&quot;mf-alert-dismiss&quot; data-mf-dismiss&gt;&lt;span class=&quot;mfi-x-lg&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+	&lt;/header&gt;
+	A dismissible success message
+&lt;/div&gt;
+</code></pre>
+				</section>
+				
+				<section id="accordions">
+					<h2>Accordions</h2>
+					<ul class="mf-accordion">
+	<li>Header One</li>
+	<li>Contents One</li>
+	<li>Header Two</li>
+	<li>Contents Two</li>
+	<li>Header Three</li>
+	<li>Contents Three</li>
+</ul>
+<pre><code class="language-html">&lt;ul class=&quot;mf-accordion&quot;&gt;
+	&lt;li&gt;Header One&lt;/li&gt;
+	&lt;li&gt;Contents One&lt;/li&gt;
+	&lt;li&gt;Header Two&lt;/li&gt;
+	&lt;li&gt;Contents Two&lt;/li&gt;
+	&lt;li&gt;Header Three&lt;/li&gt;
+	&lt;li&gt;Contents Three&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+					<br>
+					<b>Accordion with attribute</b> <code>data-mf-collapse</code>
+					<ul class="mf-accordion" data-mf-collapse>
+	<li>Header One</li>
+	<li>Contents One</li>
+	<li>Header Two</li>
+	<li>Contents Two</li>
+	<li>Header Three</li>
+	<li>Contents Three</li>
+</ul>
+<pre><code class="language-html">&lt;ul class=&quot;mf-accordion&quot; data-mf-collapse&gt;
+	&lt;li&gt;Header One&lt;/li&gt;
+	&lt;li&gt;Contents One&lt;/li&gt;
+	&lt;li&gt;Header Two&lt;/li&gt;
+	&lt;li&gt;Contents Two&lt;/li&gt;
+	&lt;li&gt;Header Three&lt;/li&gt;
+	&lt;li&gt;Contents Three&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+				</section>
+				
+				<section id="tabs">
+					<h2>Tabs</h2>
+					<div class="mf-tabs">
+	<ul>
+		<li class="active"><a href="#" data-mf-target="content-one">Tab One</a></li>
+		<li><a href="#" data-mf-target="content-two">Tab Two</a></li>
+		<li class="disabled">Tab Three</li>
+		<li class="right"><a href="#" data-mf-target="content-four">Tab Four</a></li>
+		<li class="disabled">Tab Five</li>
+	</ul>
+	<div id="content-one" class="active">Content One<br>Content One<br>Content One<br>Content One<br></div>
+	<div id="content-two">Content Two<br>Content Two<br>Content Two<br>Content Two<br></div>
+	<div id="content-four">Content Four<br>Content Four<br>Content Four<br>Content Four<br></div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;mf-tabs&quot;&gt;
+	&lt;ul&gt;
+		&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot; data-mf-target=&quot;content-one&quot;&gt;Tab One&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#&quot; data-mf-target=&quot;content-two&quot;&gt;Tab Two&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;disabled&quot;&gt;Tab Three&lt;/li&gt;
+		&lt;li class=&quot;right&quot;&gt;&lt;a href=&quot;#&quot; data-mf-target=&quot;content-four&quot;&gt;Tab Four&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;disabled&quot;&gt;Tab Five&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div id=&quot;content-one&quot; class=&quot;active&quot;&gt;Content One&lt;br&gt;Content One&lt;br&gt;Content One&lt;br&gt;Content One&lt;br&gt;&lt;/div&gt;
+	&lt;div id=&quot;content-two&quot;&gt;Content Two&lt;br&gt;Content Two&lt;br&gt;Content Two&lt;br&gt;Content Two&lt;br&gt;&lt;/div&gt;
+	&lt;div id=&quot;content-four&quot;&gt;Content Four&lt;br&gt;Content Four&lt;br&gt;Content Four&lt;br&gt;Content Four&lt;br&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+				</section>
+				
+				<section id="modals">
+					<h2>Modals</h2>
+					A simple modal box<br>
+					<div class="mf-modal" role="dialog" id="modal-example">
+	<div class="mf-modal-box">
+		<div class="mf-modal-header">
+			<div class="mf-modal-title">Modal box example</div>
+			<div class="mf-modal-dismiss" data-mf-dismiss><b><span class="mfi-x-lg"></span></b></div>
+		</div>
+		<div class="mf-modal-content">
+			Sample content
+		</div>
+		<div class="mf-modal-footer">
+			<button class="mf-button grey" data-mf-dismiss>Close</button>
+			<button class="mf-button blue">Save</button>
+		</div>
+	</div>
+</div>
+<button class="mf-button blue" data-mf-toggle-modal data-mf-target="modal-example">Open modal</button>
+<pre><code class="language-html">&lt;div class=&quot;mf-modal&quot; role=&quot;dialog&quot; id=&quot;modal-example&quot;&gt;
+	&lt;div class=&quot;mf-modal-box&quot;&gt;
+		&lt;div class=&quot;mf-modal-header&quot;&gt;
+			&lt;div class=&quot;mf-modal-title&quot;&gt;Modal box example&lt;/div&gt;
+			&lt;div class=&quot;mf-modal-dismiss&quot; data-mf-dismiss&gt;&lt;b&gt;&lt;span class=&quot;mfi-x-lg&quot;&gt;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mf-modal-content&quot;&gt;
+			Sample content
+		&lt;/div&gt;
+		&lt;div class=&quot;mf-modal-footer&quot;&gt;
+			&lt;button class=&quot;mf-button grey&quot; data-mf-dismiss&gt;Close&lt;/button&gt;
+			&lt;button class=&quot;mf-button blue&quot;&gt;Save&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;mf-button blue&quot; data-mf-toggle-modal data-mf-target=&quot;modal-example&quot;&gt;Open modal&lt;/button&gt;
+</code></pre>
+					A modal box with large content<br>
+					<div class="mf-modal" role="dialog" id="modal-example-with-long-content">
+	<div class="mf-modal-box">
+		<div class="mf-modal-header">
+			<div class="mf-modal-title">Modal box example</div>
+			<div class="mf-modal-dismiss" data-mf-dismiss><b><span class="mfi-x-lg"></span></b></div>
+		</div>
+		<div class="mf-modal-content">
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+			Very long content Very long content Very long content Very long content<br>
+		</div>
+		<div class="mf-modal-footer">
+			<button class="mf-button grey" data-mf-dismiss>Close</button>
+			<button class="mf-button blue">Save</button>
+		</div>
+	</div>
+</div>
+<button class="mf-button blue" data-mf-toggle-modal data-mf-target="modal-example-with-long-content">
+	Open modal with long content
+</button>
+<pre><code class="language-html">&lt;div class=&quot;mf-modal&quot; role=&quot;dialog&quot; id=&quot;modal-example-with-long-content&quot;&gt;
+	&lt;div class=&quot;mf-modal-box&quot;&gt;
+		&lt;div class=&quot;mf-modal-header&quot;&gt;
+			&lt;div class=&quot;mf-modal-title&quot;&gt;Modal box example&lt;/div&gt;
+			&lt;div class=&quot;mf-modal-dismiss&quot; data-mf-dismiss&gt;&lt;b&gt;&lt;span class=&quot;mfi-x-lg&quot;&gt;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mf-modal-content&quot;&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+			Very long content Very long content Very long content Very long content&lt;br&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mf-modal-footer&quot;&gt;
+			&lt;button class=&quot;mf-button grey&quot; data-mf-dismiss&gt;Close&lt;/button&gt;
+			&lt;button class=&quot;mf-button blue&quot;&gt;Save&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;mf-button blue&quot; data-mf-toggle-modal data-mf-target=&quot;modal-example-with-long-content&quot;&gt;
+	Open modal with long content
+&lt;/button&gt;
+</code></pre>
+					A large modal box<br>
+					<div class="mf-modal" role="dialog" id="modal-example-large">
+	<div class="mf-modal-box large">
+		<div class="mf-modal-header">
+			<div class="mf-modal-title">Modal box example</div>
+			<div class="mf-modal-dismiss" data-mf-dismiss><b><span class="mfi-x-lg"></span></b></div>
+		</div>
+		<div class="mf-modal-content">
+			Sample content
+		</div>
+		<div class="mf-modal-footer">
+			<button class="mf-button grey" data-mf-dismiss>Close</button>
+			<button class="mf-button blue">Save</button>
+		</div>
+	</div>
+</div>
+<button class="mf-button blue" data-mf-toggle-modal data-mf-target="modal-example-large">Open large modal</button>
+<pre><code class="language-html">&lt;div class=&quot;mf-modal&quot; role=&quot;dialog&quot; id=&quot;modal-example-large&quot;&gt;
+	&lt;div class=&quot;mf-modal-box large&quot;&gt;
+		&lt;div class=&quot;mf-modal-header&quot;&gt;
+			&lt;div class=&quot;mf-modal-title&quot;&gt;Modal box example&lt;/div&gt;
+			&lt;div class=&quot;mf-modal-dismiss&quot; data-mf-dismiss&gt;&lt;b&gt;&lt;span class=&quot;mfi-x-lg&quot;&gt;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mf-modal-content&quot;&gt;
+			Sample content
+		&lt;/div&gt;
+		&lt;div class=&quot;mf-modal-footer&quot;&gt;
+			&lt;button class=&quot;mf-button grey&quot; data-mf-dismiss&gt;Close&lt;/button&gt;
+			&lt;button class=&quot;mf-button blue&quot;&gt;Save&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;mf-button blue&quot; data-mf-toggle-modal data-mf-target=&quot;modal-example-large&quot;&gt;Open large modal&lt;/button&gt;
+</code></pre>
+					A very large modal box<br>
+					<div class="mf-modal" role="dialog" id="modal-example-xlarge">
+	<div class="mf-modal-box xlarge">
+		<div class="mf-modal-header">
+			<div class="mf-modal-title">Modal box example</div>
+			<div class="mf-modal-dismiss" data-mf-dismiss><b><span class="mfi-x-lg"></span></b></div>
+		</div>
+		<div class="mf-modal-content">
+			Sample content
+		</div>
+		<div class="mf-modal-footer">
+			<button class="mf-button grey" data-mf-dismiss>Close</button>
+			<button class="mf-button blue">Save</button>
+		</div>
+	</div>
+</div>
+<button class="mf-button blue" data-mf-toggle-modal data-mf-target="modal-example-xlarge">Open very large modal</button>
+<pre><code class="language-html">&lt;div class=&quot;mf-modal&quot; role=&quot;dialog&quot; id=&quot;modal-example-xlarge&quot;&gt;
+	&lt;div class=&quot;mf-modal-box xlarge&quot;&gt;
+		&lt;div class=&quot;mf-modal-header&quot;&gt;
+			&lt;div class=&quot;mf-modal-title&quot;&gt;Modal box example&lt;/div&gt;
+			&lt;div class=&quot;mf-modal-dismiss&quot; data-mf-dismiss&gt;&lt;b&gt;&lt;span class=&quot;mfi-x-lg&quot;&gt;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;mf-modal-content&quot;&gt;
+			Sample content
+		&lt;/div&gt;
+		&lt;div class=&quot;mf-modal-footer&quot;&gt;
+			&lt;button class=&quot;mf-button grey&quot; data-mf-dismiss&gt;Close&lt;/button&gt;
+			&lt;button class=&quot;mf-button blue&quot;&gt;Save&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class=&quot;mf-button blue&quot; data-mf-toggle-modal data-mf-target=&quot;modal-example-xlarge&quot;&gt;Open very large modal&lt;/button&gt;
+</code></pre>
+				</section>
+				
+				<section id="paginations">
+					<h2>Paginations</h2>
+					<nav class="mf-pagination">
+	<ul>
+		<li><a href="">Previous</a></li>
+		<li><a href="">3</a></li>
+		<li class="active"><a href="">4</a></li>
+		<li><a href="">5</a></li>
+		<li class=disabled><a href="">Next</a></li>
+	</ul>
+</nav>
+<pre><code class="language-html">&lt;nav class=&quot;mf-pagination&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=disabled&gt;&lt;a href=&quot;&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+					<h3>Sizes</h3>
+					<nav class="mf-pagination large">
+	<ul>
+		<li><a href="">Previous</a></li>
+		<li><a href="">3</a></li>
+		<li class="active"><a href="">4</a></li>
+		<li><a href="">5</a></li>
+		<li class=disabled><a href="">Next</a></li>
+	</ul>
+</nav>
+
+<nav class="mf-pagination small">
+	<ul>
+		<li><a href="">Previous</a></li>
+		<li><a href="">3</a></li>
+		<li class="active"><a href="">4</a></li>
+		<li><a href="">5</a></li>
+		<li class=disabled><a href="">Next</a></li>
+	</ul>
+</nav>
+<pre><code class="language-html">&lt;nav class=&quot;mf-pagination large&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=disabled&gt;&lt;a href=&quot;&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;nav class=&quot;mf-pagination small&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=disabled&gt;&lt;a href=&quot;&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+				</section>
+				
+				<section id="cards">
+					<h2>Cards</h2>
+					None of header or footer are mandatory
+					<div class='mf-card'>
+	<header>Card title</header>
+	Card content<br>
+	<footer>A footer</footer>
+</div>
+<pre><code class="language-html">&lt;div class=&#039;mf-card&#039;&gt;
+	&lt;header&gt;Card title&lt;/header&gt;
+	Card content&lt;br&gt;
+	&lt;footer&gt;A footer&lt;/footer&gt;
+&lt;/div&gt;
+</code></pre>
+				</section>
+				
+				<section id="colors">
+					<h2>Colors</h2>
+					MFELT comes with a set of predefined colors you can use by setting classes to html elements. The special feature is that borders, background or text with the same keyword are not exactly the same color, so the rendering is harmonious
+					<h3>Backgrounds</h3>
+					Predefined background colors are usefull because the css classes embed text colors adapted to the luminosity/dakkness of the background
+					<div class="palette">
+						<div class="paletteSample bg-grey-lighter">bg-grey-lighter</div>
+						<div class="paletteSample bg-grey-light">bg-grey-light</div>
+						<div class="paletteSample bg-grey">bg-grey</div>
+						<div class="paletteSample bg-grey-dark">bg-grey-dark</div>
+						<div class="paletteSample bg-grey-darker">bg-grey-darker</div>
+						<div class="paletteSample bg-green-lighter">bg-green-lighter</div>
+						<div class="paletteSample bg-green-light">bg-green-light</div>
+						<div class="paletteSample bg-green">bg-green</div>
+						<div class="paletteSample bg-green-dark">bg-green-dark</div>
+						<div class="paletteSample bg-green-darker">bg-green-darker</div>
+						<div class="paletteSample bg-yellow-lighter">bg-yellow-lighter</div>
+						<div class="paletteSample bg-yellow-light">bg-yellow-light</div>
+						<div class="paletteSample bg-yellow">bg-yellow</div>
+						<div class="paletteSample bg-yellow-dark">bg-yellow-dark</div>
+						<div class="paletteSample bg-yellow-darker">bg-yellow-darker</div>
+						<div class="paletteSample bg-orange-lighter">bg-orange-lighter</div>
+						<div class="paletteSample bg-orange-light">bg-orange-light</div>
+						<div class="paletteSample bg-orange">bg-orange</div>
+						<div class="paletteSample bg-orange-dark">bg-orange-dark</div>
+						<div class="paletteSample bg-orange-darker">bg-orange-darker</div>
+						<div class="paletteSample bg-red-lighter">bg-red-lighter</div>
+						<div class="paletteSample bg-red-light">bg-red-light</div>
+						<div class="paletteSample bg-red">bg-red</div>
+						<div class="paletteSample bg-red-dark">bg-red-dark</div>
+						<div class="paletteSample bg-red-darker">bg-red-darker</div>
+						<div class="paletteSample bg-purple-lighter">bg-purple-lighter</div>
+						<div class="paletteSample bg-purple-light">bg-purple-light</div>
+						<div class="paletteSample bg-purple">bg-purple</div>
+						<div class="paletteSample bg-purple-dark">bg-purple-dark</div>
+						<div class="paletteSample bg-purple-darker">bg-purple-darker</div>
+						<div class="paletteSample bg-blue-lighter">bg-blue-lighter</div>
+						<div class="paletteSample bg-blue-light">bg-blue-light</div>
+						<div class="paletteSample bg-blue">bg-blue</div>
+						<div class="paletteSample bg-blue-dark">bg-blue-dark</div>
+						<div class="paletteSample bg-blue-darker">bg-blue-darker</div>
+						<div class="paletteSample bg-cyan-lighter">bg-cyan-lighter</div>
+						<div class="paletteSample bg-cyan-light">bg-cyan-light</div>
+						<div class="paletteSample bg-cyan">bg-cyan</div>
+						<div class="paletteSample bg-cyan-dark">bg-cyan-dark</div>
+						<div class="paletteSample bg-cyan-darker">bg-cyan-darker</div>
+					</div>
+					<h3>Backgrounds and borders</h3>
+					For the demo, the border width is larger than the default value.<br>This highlights the difference in colour between background and border of the same class modifier.
+					<div class="palette">
+						<div class="paletteSample border-grey-lighter bg-grey-lighter" style="border-width: 10px;">bg-grey-lighter<br>border-grey-lighter</div>
+						<div class="paletteSample border-grey-light bg-grey-light" style="border-width: 10px;">bg-grey-light<br>border-grey-light</div>
+						<div class="paletteSample border-grey bg-grey" style="border-width: 10px;">bg-grey<br>border-grey</div>
+						<div class="paletteSample border-grey-dark bg-grey-dark" style="border-width: 10px;">bg-grey-dark<br>border-grey-dark</div>
+						<div class="paletteSample border-grey-darker bg-grey-darker" style="border-width: 10px;">bg-grey-darker<br>border-grey-darker</div>
+						<div class="paletteSample border-green-lighter bg-green-lighter" style="border-width: 10px;">bg-green-lighter<br>border-green-lighter</div>
+						<div class="paletteSample border-green-light bg-green-light" style="border-width: 10px;">bg-green-light<br>border-green-light</div>
+						<div class="paletteSample border-green bg-green" style="border-width: 10px;">bg-green<br>border-green</div>
+						<div class="paletteSample border-green-dark bg-green-dark" style="border-width: 10px;">bg-green-dark<br>border-green-dark</div>
+						<div class="paletteSample border-green-darker bg-green-darker" style="border-width: 10px;">bg-green-darker<br>border-green-darker</div>
+						<div class="paletteSample border-yellow-lighter bg-yellow-lighter" style="border-width: 10px;">bg-yellow-lighter<br>border-yellow-lighter</div>
+						<div class="paletteSample border-yellow-light bg-yellow-light" style="border-width: 10px;">bg-yellow-light<br>border-yellow-light</div>
+						<div class="paletteSample border-yellow bg-yellow" style="border-width: 10px;">bg-yellow<br>border-yellow</div>
+						<div class="paletteSample border-yellow-dark bg-yellow-dark" style="border-width: 10px;">bg-yellow-dark<br>border-yellow-dark</div>
+						<div class="paletteSample border-yellow-darker bg-yellow-darker" style="border-width: 10px;">bg-yellow-darker<br>border-yellow-darker</div>
+						<div class="paletteSample border-orange-lighter bg-orange-lighter" style="border-width: 10px;">bg-orange-lighter<br>border-orange-lighter</div>
+						<div class="paletteSample border-orange-light bg-orange-light" style="border-width: 10px;">bg-orange-light<br>border-orange-light</div>
+						<div class="paletteSample border-orange bg-orange" style="border-width: 10px;">bg-orange<br>border-orange</div>
+						<div class="paletteSample border-orange-dark bg-orange-dark" style="border-width: 10px;">bg-orange-dark<br>border-orange-dark</div>
+						<div class="paletteSample border-orange-darker bg-orange-darker" style="border-width: 10px;">bg-orange-darker<br>border-orange-darker</div>
+						<div class="paletteSample border-red-lighter bg-red-lighter" style="border-width: 10px;">bg-red-lighter<br>border-red-lighter</div>
+						<div class="paletteSample border-red-light bg-red-light" style="border-width: 10px;">bg-red-light<br>border-red-light</div>
+						<div class="paletteSample border-red bg-red" style="border-width: 10px;">bg-red<br>border-red</div>
+						<div class="paletteSample border-red-dark bg-red-dark" style="border-width: 10px;">bg-red-dark<br>border-red-dark</div>
+						<div class="paletteSample border-red-darker bg-red-darker" style="border-width: 10px;">bg-red-darker<br>border-red-darker</div>
+						<div class="paletteSample border-purple-lighter bg-purple-lighter" style="border-width: 10px;">bg-purple-lighter<br>border-purple-lighter</div>
+						<div class="paletteSample border-purple-light bg-purple-light" style="border-width: 10px;">bg-purple-light<br>border-purple-light</div>
+						<div class="paletteSample border-purple bg-purple" style="border-width: 10px;">bg-purple<br>border-purple</div>
+						<div class="paletteSample border-purple-dark bg-purple-dark" style="border-width: 10px;">bg-purple-dark<br>border-purple-dark</div>
+						<div class="paletteSample border-purple-darker bg-purple-darker" style="border-width: 10px;">bg-purple-darker<br>border-purple-darker</div>
+						<div class="paletteSample border-blue-lighter bg-blue-lighter" style="border-width: 10px;">bg-blue-lighter<br>border-blue-lighter</div>
+						<div class="paletteSample border-blue-light bg-blue-light" style="border-width: 10px;">bg-blue-light<br>border-blue-light</div>
+						<div class="paletteSample border-blue bg-blue" style="border-width: 10px;">bg-blue<br>border-blue</div>
+						<div class="paletteSample border-blue-dark bg-blue-dark" style="border-width: 10px;">bg-blue-dark<br>border-blue-dark</div>
+						<div class="paletteSample border-blue-darker bg-blue-darker" style="border-width: 10px;">bg-blue-darker<br>border-blue-darker</div>
+						<div class="paletteSample border-cyan-lighter bg-cyan-lighter" style="border-width: 10px;">bg-cyan-lighter<br>border-cyan-lighter</div>
+						<div class="paletteSample border-cyan-light bg-cyan-light" style="border-width: 10px;">bg-cyan-light<br>border-cyan-light</div>
+						<div class="paletteSample border-cyan bg-cyan" style="border-width: 10px;">bg-cyan<br>border-cyan</div>
+						<div class="paletteSample border-cyan-dark bg-cyan-dark" style="border-width: 10px;">bg-cyan-dark<br>border-cyan-dark</div>
+						<div class="paletteSample border-cyan-darker bg-cyan-darker" style="border-width: 10px;">bg-cyan-darker<br>border-cyan-darker</div>
+					</div>
+					<h3>Borders and texts</h3>
+					<div class="palette">
+						<div class="paletteSample border-grey-lighter txt-grey-lighter">border-grey-lighter<br>txt-grey-lighter</div>
+						<div class="paletteSample border-grey-light txt-grey-light">border-grey-light<br>txt-grey-light</div>
+						<div class="paletteSample border-grey txt-grey">border-grey<br>txt-grey</div>
+						<div class="paletteSample border-grey-dark txt-grey-dark">border-grey-dark<br>txt-grey-dark</div>
+						<div class="paletteSample border-grey-darker txt-grey-darker">border-grey-darker<br>txt-grey-darker</div>
+						<div class="paletteSample border-green-lighter txt-green-lighter">border-green-lighter<br>txt-green-lighter</div>
+						<div class="paletteSample border-green-light txt-green-light">border-green-light<br>txt-green-light</div>
+						<div class="paletteSample border-green txt-green">border-green<br>txt-green</div>
+						<div class="paletteSample border-green-dark txt-green-dark">border-green-dark<br>txt-green-dark</div>
+						<div class="paletteSample border-green-darker txt-green-darker">border-green-darker<br>txt-green-darker</div>
+						<div class="paletteSample border-yellow-lighter txt-yellow-lighter">border-yellow-lighter<br>txt-yellow-lighter</div>
+						<div class="paletteSample border-yellow-light txt-yellow-light">border-yellow-light<br>txt-yellow-light</div>
+						<div class="paletteSample border-yellow txt-yellow">border-yellow<br>txt-yellow</div>
+						<div class="paletteSample border-yellow-dark txt-yellow-dark">border-yellow-dark<br>txt-yellow-dark</div>
+						<div class="paletteSample border-yellow-darker txt-yellow-darker">border-yellow-darker<br>txt-yellow-darker</div>
+						<div class="paletteSample border-orange-lighter txt-orange-lighter">border-orange-lighter<br>txt-orange-lighter</div>
+						<div class="paletteSample border-orange-light txt-orange-light">border-orange-light<br>txt-orange-light</div>
+						<div class="paletteSample border-orange txt-orange">border-orange<br>txt-orange</div>
+						<div class="paletteSample border-orange-dark txt-orange-dark">border-orange-dark<br>txt-orange-dark</div>
+						<div class="paletteSample border-orange-darker txt-orange-darker">border-orange-darker<br>txt-orange-darker</div>
+						<div class="paletteSample border-red-lighter txt-red-lighter">border-red-lighter<br>txt-red-lighter</div>
+						<div class="paletteSample border-red-light txt-red-light">border-red-light<br>txt-red-light</div>
+						<div class="paletteSample border-red txt-red">border-red<br>txt-red</div>
+						<div class="paletteSample border-red-dark txt-red-dark">border-red-dark<br>txt-red-dark</div>
+						<div class="paletteSample border-red-darker txt-red-darker">border-red-darker<br>txt-red-darker</div>
+						<div class="paletteSample border-purple-lighter txt-purple-lighter">border-purple-lighter<br>txt-purple-lighter</div>
+						<div class="paletteSample border-purple-light txt-purple-light">border-purple-light<br>txt-purple-light</div>
+						<div class="paletteSample border-purple txt-purple">border-purple<br>txt-purple</div>
+						<div class="paletteSample border-purple-dark txt-purple-dark">border-purple-dark<br>txt-purple-dark</div>
+						<div class="paletteSample border-purple-darker txt-purple-darker">border-purple-darker<br>txt-purple-darker</div>
+						<div class="paletteSample border-blue-lighter txt-blue-lighter">border-blue-lighter<br>txt-blue-lighter</div>
+						<div class="paletteSample border-blue-light txt-blue-light">border-blue-light<br>txt-blue-light</div>
+						<div class="paletteSample border-blue txt-blue">border-blue<br>txt-blue</div>
+						<div class="paletteSample border-blue-dark txt-blue-dark">border-blue-dark<br>txt-blue-dark</div>
+						<div class="paletteSample border-blue-darker txt-blue-darker">border-blue-darker<br>txt-blue-darker</div>
+						<div class="paletteSample border-cyan-lighter txt-cyan-lighter">border-cyan-lighter<br>txt-cyan-lighter</div>
+						<div class="paletteSample border-cyan-light txt-cyan-light">border-cyan-light<br>txt-cyan-light</div>
+						<div class="paletteSample border-cyan txt-cyan">border-cyan<br>txt-cyan</div>
+						<div class="paletteSample border-cyan-dark txt-cyan-dark">border-cyan-dark<br>txt-cyan-dark</div>
+						<div class="paletteSample border-cyan-darker txt-cyan-darker">border-cyan-darker<br>txt-cyan-darker</div>
+					</div>
+				</section>
+			</main>
+			<div class="padding"></div>
+		</div>
+		<footer>
+			<div class="padding"></div>
+			<div></div><div></div>
+			<div class="padding"></div>
+		</footer>
+	</body>
+</html>
