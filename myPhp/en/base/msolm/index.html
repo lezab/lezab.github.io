@@ -1,0 +1,1285 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../msorm/">
+      
+      
+        <link rel="next" href="../../tools/">
+      
+      
+        
+          <link rel="alternate" href="../../" hreflang="en">
+        
+          <link rel="alternate" href="../../../fr/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>My Simple OLM - My Php</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#my-simple-olm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Php" class="md-header__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Php
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              My Simple OLM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Php" class="md-nav__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    My Php
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Micro Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../mlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Lib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My Lib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConfig
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MForm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mformvalidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFormValidator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mconsole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConsole
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mcache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mldap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLdap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mmailer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMailer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mmessenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMessenger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mencoderdecoder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEncoderDecoder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mautocomplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAutoComplete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msorm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple ORM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple OLM
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple OLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An Example
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="An Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-descriptionxml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The description.xml File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-generated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Generated
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-this-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This Model?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/mcacheviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Cache Viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An Example
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="An Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-descriptionxml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The description.xml File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-generated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Generated
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-this-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This Model?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="my-simple-olm">My Simple OLM</h1>
+<h2 id="presentation">Presentation</h2>
+<p>OLM stands for <strong>Object Ldap Mapping</strong>.</p>
+<p>msolm is a PHP class generator based on the same principle as msorm, but for LDAP databases.</p>
+<p>From an XML file that describes one or more types of LDAP entries, msolm generates a set of PHP classes that represent these entries. This PHP object model can be copied into a project and is usable as is, without any other tools being necessary.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Classes generated by msolm use the MLdap class from mlib (mlib\net\ldap\MLdap).</p>
+</div>
+<p>The generated model can be extended with additional methods that can be written.</p>
+<p>Using the model is very easy and makes the application code very readable.</p>
+<p>msolm is organized as follows:</p>
+<div class="highlight"><pre><span></span><code>msolm/
+<span class="w">  </span>├──<span class="w"> </span>msolm.php
+<span class="w">  </span>├──<span class="w"> </span>generators/
+<span class="w">  </span>│<span class="w">   </span>...
+<span class="w">  </span>│<span class="w">   </span>...
+<span class="w">  </span>└──<span class="w"> </span>projects/
+<span class="w">        </span>├──<span class="w"> </span>myproject_1/
+<span class="w">        </span>│<span class="w">    </span>└──<span class="w"> </span>description.xml
+<span class="w">        </span>└──<span class="w"> </span>myproject_2/
+<span class="w">             </span>└──<span class="w"> </span>description.xml
+</code></pre></div>
+<p>For a given project, you need to create a <code>description.xml</code> file (see <a href="#xmlfile">here</a>) and run the following command (the <code>msolm.php</code> file must have execution rights):</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>./msolm.php<span class="w"> </span>-g<span class="w"> </span>-p<span class="w"> </span>myproject
+</code></pre></div>
+<p>This command is the most basic. It will take the <code>description.xml</code> file located in the <code>myproject/</code> subfolder of the <code>projects/</code> folder and create a <code>model/</code> folder at the same level, which contains all the generated PHP files.</p>
+<p>There are several options, including:</p>
+<ul>
+<li><strong>-g</strong> (or --generate)</li>
+<li><strong>-o</strong> (or --output): allows specifying a different destination folder than the <code>model/</code> subfolder.</li>
+<li><strong>-u</strong> (or --update): allows not overwriting any additional code that may have been written.</li>
+<li><strong>-h</strong> (or -? or --help): displays help summarizing all options.</li>
+</ul>
+<p><a id="xmlfile"></a></p>
+<h2 id="an-example">An Example</h2>
+<h3 id="the-descriptionxml-file">The <code>description.xml</code> File</h3>
+<p>Example:<br />
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="nt">&lt;ldap</span><span class="w"> </span><span class="na">host=</span><span class="s">&quot;ldap.my-corp.org&quot;</span><span class="w"> </span><span class="na">port=</span><span class="s">&quot;389&quot;</span><span class="w"> </span><span class="na">bind_dn=</span><span class="s">&quot;cn=manager,dc=my-corp,dc=org&quot;</span><span class="w"> </span><span class="na">bind_password=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">phpNamespace=</span><span class="s">&quot;ldapsample&quot;</span><span class="nt">&gt;</span><span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;object</span><span class="w"> </span><span class="na">ou=</span><span class="s">&quot;ou=people,dc=my-corp,dc=org&quot;</span><span class="w"> </span><span class="na">filter=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;Person&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;uid&quot;</span><span class="w"> </span><span class="na">rdn=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">phpAttributeName=</span><span class="s">&quot;login&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sn&quot;</span><span class="w"> </span><span class="na">phpAttributeName=</span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;givenName&quot;</span><span class="w"> </span><span class="na">phpAttributeName=</span><span class="s">&quot;firstname&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;displayName&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mail&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;otherMails&quot;</span><span class="w"> </span><span class="na">multi=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">phpAttributeName=</span><span class="s">&quot;mailAlias&quot;</span><span class="w"> </span><span class="na">phpAttributePFName=</span><span class="s">&quot;mailAliases&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/object&gt;</span>
+<span class="nt">&lt;/ldap&gt;</span>
+</code></pre></div></p>
+<h3 id="what-is-generated">What is Generated</h3>
+<div class="highlight"><pre><span></span><code>model/
+└── ldapsample
+    ├── Person.php
+    ├── PersonManager.php
+    ├── core
+    │   ├── LdapConnectionProvider.php
+    │   ├── MSOLM.php
+    │   ├── Person.conf.php
+    │   ├── PersonCore.php
+    │   ├── PersonManagerCore.php
+    │   └── __ldap_params.conf.php
+    └── exceptions
+        ├── LdapConnectionProviderException.php
+        ├── PersonException.php
+        └── PersonManagerException.php
+</code></pre></div>
+<ul>
+<li>Each "object" defined in the XML file generates two classes.</li>
+<li>For each object, the <code>phpObjectName</code> attribute is defined, which will be the name of the class.<ul>
+<li>The <code>phpObjectPFName</code> attribute can also be defined if the plural is not formed by simply adding an "s". 'PF' stands for 'plural form'. This form is used to generate the name of the manager.</li>
+</ul>
+</li>
+<li>For each attribute, a <code>phpAttributeName</code> (and possibly a <code>phpAttributePFName</code> if multi-valued) can be defined if you want the PHP class attribute to be named differently from the LDAP attribute. This allows for better abstraction.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Important</p>
+<p>In the <code>core/</code> folder, in addition to the two classes ObjectCore and ObjectManagerCore, there is a third file Object.conf.php.<br />
+This file defines the mapping of attribute names.<br />
+By default, it contains what is indicated in the XML file.<br />
+However, in the development of applications interfaced with an LDAP directory, most of the time we use an existing directory, for which we did not choose the schemas and attribute names (unlike databases where the database design is part of the application development). That's why we offer the possibility to modify these attribute names in a separate configuration file. Some attributes can even be left empty if the directory does not have the information.</p>
+</div>
+<p>Exemple :<br />
+<div class="highlight"><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$ldap_base</span> <span class="o">=</span> <span class="s2">&quot;ou=people,dc=univ-perp,dc=fr&quot;</span><span class="p">;</span>
+<span class="nv">$ldap_filter</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">$ldap_attributes_mapping</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s2">&quot;login&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;uid&quot;</span><span class="p">,</span>  
+        <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;sn&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;firstname&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;givenName&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;displayName&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;displayName&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;mail&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;mail&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;mailAliases&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;otherMails&quot;</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></p>
+<h3 id="how-to-use-this-model">How to Use This Model?</h3>
+<p>The principle remains the same, but the generated classes contain code and attributes that really depend on the definition XML file.</p>
+<p>Example:<br />
+<div class="highlight"><pre><span></span><code><span class="nv">$persons_manager</span> <span class="o">=</span> <span class="nx">ldapsample\PersonsManager</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+
+<span class="nv">$person</span> <span class="o">=</span> <span class="nv">$persons_manager</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;aPersonLogin&#39;</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$person</span><span class="o">-&gt;</span><span class="na">getLogin</span><span class="p">()</span><span class="o">.</span><span class="s2">&quot; : &quot;</span><span class="o">.</span><span class="nv">$person</span><span class="o">-&gt;</span><span class="na">getDisplayName</span><span class="p">()</span><span class="o">.</span><span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">&quot;    &quot;</span><span class="o">.</span><span class="nv">$person</span><span class="o">-&gt;</span><span class="na">getMail</span><span class="p">()</span><span class="o">.</span><span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="k">foreach</span><span class="p">(</span><span class="nv">$person</span><span class="o">-&gt;</span><span class="na">getMailAliases</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$mailAlias</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="s2">&quot;    &quot;</span><span class="o">.</span><span class="nv">$mailAlias</span><span class="o">.</span><span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$person</span><span class="o">-&gt;</span><span class="na">addMailAlias</span><span class="p">(</span><span class="s1">&#39;ceo@mycorp.org&#39;</span><span class="p">);</span>
+<span class="nv">$persons_manager</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="nv">$person</span><span class="p">);</span>
+</code></pre></div></p>
+<p>In the example above, we see that for each "object" defined in XML, we have two PHP classes: one "Object" class and one "ObjectsManager" class.</p>
+<ul>
+<li>The first represents objects with their attributes (with their getters and setters).</li>
+<li>The second is a class that allows managing these objects: obtaining one or more objects, checking existence, adding, deleting, or updating them.</li>
+</ul>
+<p>These two classes inherit from their "core" equivalents, which contain all the attributes and methods provided by default.</p>
+<p>These two classes can therefore be enriched with other attributes or methods that you may need.</p>
+<p>Unlike msorm, msolm does not manage the relationships that may exist between objects (values of an attribute of a Person object and belonging to another Group object, for example).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

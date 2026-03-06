@@ -1,0 +1,1672 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../mlib/">
+      
+      
+        
+          <link rel="alternate" href="../../" hreflang="en">
+        
+          <link rel="alternate" href="../../../fr/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>My Micro Framework - My Php</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mmf-my-micro-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Php" class="md-header__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Php
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              My Micro Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Php" class="md-nav__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    My Php
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Micro Framework
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Micro Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beginning-with-mmf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beginning with mmf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-basic-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some basic concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-mode-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development mode configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-configuration-csp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security configuration (CSP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-mmf-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What MMF provides
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What MMF provides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-layouts-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A layouts mechanism
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A layouts mechanism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-few-things-to-know-about-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A few things to know about layouts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-static-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some useful static functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some useful constants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-automatic-extension-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An automatic extension mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-autoload-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some autoload functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-private-files-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A private files mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../mlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Lib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My Lib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConfig
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MForm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mformvalidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFormValidator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mconsole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConsole
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mcache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mldap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLdap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mmailer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMailer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mmessenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMessenger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mencoderdecoder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEncoderDecoder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mautocomplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAutoComplete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msorm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple ORM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msolm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple OLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/mcacheviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Cache Viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beginning-with-mmf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beginning with mmf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-basic-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some basic concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-mode-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development mode configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-configuration-csp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security configuration (CSP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-mmf-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What MMF provides
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What MMF provides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-layouts-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A layouts mechanism
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A layouts mechanism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-few-things-to-know-about-layouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A few things to know about layouts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-static-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some useful static functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some useful constants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-automatic-extension-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        An automatic extension mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-autoload-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Some autoload functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-private-files-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A private files mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mmf-my-micro-framework">MMF : My Micro Framework</h1>
+<p>My Micro Framework is a minimalist php framework that doesn't provide a lot of functionality but is very easy to learn.</p>
+<p>The aim is not to have to learn anything more than you already know if you know php.</p>
+<h2 id="beginning-with-mmf">Beginning with mmf</h2>
+<p>Once downloaded and unzipped, wherever you want on your web server, you will get this :</p>
+<div class="highlight"><pre><span></span><code>/var/www/html/…/myproject/
+                            app/
+                            assets/
+                            libs/
+                            mmf/
+                            scripts/
+                            .htaccess
+                            index.php
+</code></pre></div>
+<p>From here you can access mmf in a browser. A first test page is delivered.</p>
+<p>In the rest of the documentation, we'll assume that mmf is installed at the root of the <code>http://test.mycorp.com</code> website.</p>
+<h2 id="some-basic-concepts">Some basic concepts</h2>
+<p>The <code>app/</code> directory is where you will be working most often.</p>
+<p>The <code>assets/</code> directory contains everything that needs to be directly accessible without processing: css, javascript, images or client libraries combining these elements (jQuery, twitter bootstrap, etc.).</p>
+<p>The <code>libs/</code> directory is for php libraries.</p>
+<p>In the <code>app/</code> folder you'll find 3 sub-directories (actually 5, but we'll come back to that later):</p>
+<div class="highlight"><pre><span></span><code>controllers/ ← processes
+models/      ← data models (the business layer and the DAO)
+views/       ← views (basically html)
+</code></pre></div>
+<p>The first thing to know is that in mmf you don't need to declare routes/paths for it to work. Routes are implicit, meaning that if I create a <code>test.php</code> file in <code>controllers/</code><br />
+controllers/test.php</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">echo</span> <span class="s2">&quot;Hello !&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>A call to <code>http://test.mycorp.com/test</code> will display</p>
+<p>Hello !</p>
+<p>Let's delete this file and create a <code>test.phtml</code> file in <code>views/</code></p>
+<p>views/test.phtml</p>
+<div class="highlight"><pre><span></span><code>Hello !!
+</code></pre></div>
+<p>A call to <code>http://test.mycorp.com/test</code> will this time display</p>
+<p><img alt="" src="../../../assets/images/mmf_1.png" /></p>
+<p>which is better.</p>
+<p>In fact the simple act of creating a controller or view, creates a page with the name of the controller or view, the difference is that a view is (by default) inserted into a layout (main.phtml by default).</p>
+<p>In reality, the best practice to adopt (which you will use for 90% of the 'pages' in an application) is to create 2 files for the same page:</p>
+<p>controllers/test.php</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$view_params</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Toto&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>et</p>
+<p>views/test.phtml</p>
+<div class="highlight"><pre><span></span><code><span class="nx">Hello</span> <span class="o">&lt;?=</span> <span class="nv">$view_params</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x"> !!</span>
+<span class="x">&lt;br&gt;&lt;br&gt;</span>
+</code></pre></div>
+<p>which will display :</p>
+<p><img alt="" src="../../../assets/images/mmf_2.png" /></p>
+<p>The variables declared in a controller are all accessible in the corresponding view. The variable name $view_params is therefore not mandatory, nor does it have to be an array. You can therefore call it whatever you like, but it's a good idea to give it a name that will allow you to differentiate it from the other variables that you'll have to declare in your controllers for your processing. If it's an array, it will also be easier to find the names of the variables to use when you write the view.</p>
+<div class="admonition tip">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>If you need to write a static page, just write a pure html page in views/.</li>
+<li>If you only need to process a page, you'll only write a php file in controllers/, at the end of which you'll make a redirect.</li>
+<li>If you need to create a contextualised page, you will write a controller in which you will only perform processing and a corresponding view for display.</li>
+<li>Try never to use 'echo' in controllers.</li>
+<li>The urls called up on a site developed with MMF do not have the '.php' extension.</li>
+</ul>
+</div>
+<h2 id="configuration-file">Configuration file</h2>
+<p>The <code>mmf/config.php</code> file is the central configuration file for your MMF application. It contains the constants that define the framework's behavior.</p>
+<h3 id="session-configuration">Session configuration</h3>
+<ul>
+<li><strong>MMF_SESSION_NAME</strong> : Defines the PHP session name. Useful when running multiple MMF applications on the same server to avoid session conflicts.</li>
+<li><strong>MMF_SESSION_LIFETIME</strong> : Maximum session lifetime in seconds. Default: 1800 (30 minutes).</li>
+</ul>
+<h3 id="development-mode-configuration">Development mode configuration</h3>
+<ul>
+<li><strong>MMF_DEV</strong> : Boolean that enables/disables development mode. In DEV mode, errors are displayed in the browser and the log level is automatically set to DEBUG. <strong>Warning: never activate in production!</strong></li>
+</ul>
+<h3 id="log-configuration">Log configuration</h3>
+<ul>
+<li><strong>MMF_LOGLEVEL</strong> : Log verbosity level :</li>
+<li>0 : ERROR (only errors)</li>
+<li>1 : WARNING (errors and warnings)</li>
+<li>2 : INFO (errors, warnings and information)</li>
+<li>3 : DEBUG (all messages)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">If MMF_DEV is true, this variable is ignored and the level is automatically DEBUG.</p>
+</div>
+<h3 id="security-configuration-csp">Security configuration (CSP)</h3>
+<p>MMF integrates a CSP (Content Security Policy) protection to strengthen your application's security:</p>
+<ul>
+<li><strong>MMF_CSP_ENABLED</strong> : Enables/disables the CSP policy.</li>
+<li><strong>MMF_CSP_ALLOWED_EXTRA_DOMAINS</strong> : List of allowed external domains (separated by commas). Example: "<em>.mydomain.com,</em>.myotherdomain.com".</li>
+<li><strong>MMF_CSP_REPORT_ONLY</strong> : If true, the policy is in "report only" mode (violations are logged but not blocked).</li>
+<li><strong>MMF_CSP_REPORT_URI</strong> : URL where to send violation reports.</li>
+</ul>
+<h2 id="what-mmf-provides">What MMF provides</h2>
+<ul>
+<li><a href="#a-layouts-mechanism">A layouts mechanism</a></li>
+<li><a href="#some-useful-static-functions">Some useful static functions</a></li>
+<li><a href="#some-useful-constants">Some useful constants</a></li>
+<li><a href="#an-automatic-extension-mechanism">An automatic extension mechanism</a></li>
+<li><a href="#some-autoload-functions">Some autoload functions</a></li>
+<li><a href="#a-private-files-mechanism">A private files mechanism</a></li>
+</ul>
+<h3 id="a-layouts-mechanism">A layouts mechanism</h3>
+<p>As mentioned above, all your pages will be inserted into a layout.  This is a structure common to several or all the pages in your application. A minimal layout is provided, but you will modify it and perhaps create others.</p>
+<h5 id="a-few-things-to-know-about-layouts">A few things to know about layouts</h5>
+<ul>
+<li>Layouts are phtml files</li>
+<li>
+<p>All layouts must contain a line : <br />
+<div class="highlight"><pre><span></span><code><span class="k">echo</span> <span class="nv">$mmf_rendered_content</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>All layouts must be stored in the _layouts directory.</p>
+</li>
+</ul>
+<p>For one or more given pages, you can deactivate the layout or specify that you want to use a layout other than the default. To do this, in the controller (usually at the end), you need to call the method :</p>
+<div class="highlight"><pre><span></span><code><span class="nx">MMF</span><span class="o">::</span><span class="na">disableLayout</span><span class="p">();</span>
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code><span class="nx">MMF</span><span class="o">::</span><span class="na">setLayout</span><span class="p">(</span><span class="s1">&#39;myLayout&#39;</span><span class="p">);</span> <span class="c1">//without specifying an extension (we&#39;ll come back to this later)</span>
+</code></pre></div>
+<h3 id="some-useful-static-functions">Some useful static functions</h3>
+<p>You can always explore the code of the MMF class to see what you can do, but as the aim of MMF is not to have to learn anything, none of the MMF functions are necessary for developing with this framework. That said, for the sake of convenience, MMF does provide a few functions (mechanisms) that can save you a bit of time and help you get things done properly.</p>
+<p>The first 2 methods are those mentioned above:</p>
+<ul>
+<li>MMF::disableLayout() and MMF::setLayout(): I won't go into them again here.</li>
+</ul>
+<p>MMF then offers 2 particularly interesting methods: MMF::redirect() and MMF::error() </p>
+<ul>
+<li>
+<p>MMF::redirect() allows you, as its name suggests, to redirect the user to another page of the site passed in parameter</p>
+</li>
+<li>
+<p>MMF::error() takes a character string (an error message) and/or an exception as parameters and redirects the user to a pretty error page.</p>
+</li>
+</ul>
+<h3 id="some-useful-constants">Some useful constants</h3>
+<p>MMF provides a number of useful constants, including one in particular that will save you time: ASSETS.</p>
+<p>This constant is recalculated each time a page is called up and indicates the root of the assets directory relative to the page that was called up. In your views (and layouts), you can use this constant to include an image or style sheet, for example, to simplify your work.</p>
+<p>Ex :</p>
+<div class="highlight"><pre><span></span><code>&lt;img src=&quot;&lt;?php echo ASSETS?&gt;/images/logo.png /&gt;
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>&lt;link href=&quot;&lt;?= ASSETS ?&gt;/css/myStyle.css&quot; rel=&quot;stylesheet&quot;&gt; &lt;!-- using shorttags --&gt;
+</code></pre></div>
+<h3 id="an-automatic-extension-mechanism">An automatic extension mechanism</h3>
+<p>In your web application you will sometimes want the server to return something other than html. For example, for a pdf export or an ajax call that is supposed to return json.</p>
+<p>To do this, using the example from the beginning, simply create a new file in the views/ directory: test.json.php</p>
+<p>views/test.json.php</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$view_params</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>A call to <code>http://test.mycorp.com/test.json</code> will then display :</p>
+<div class="highlight"><pre><span></span><code>{&quot;nom&quot;:&quot;Toto&quot;}
+</code></pre></div>
+<p>Note that the file <code>test.json.php</code> can coexist with the file <code>test.phtml</code>. These are 2 different views of the same controller. This could be useful for dashboards, for example, where a table (html) can be displayed (in a phtml view) based on data collected in the controller, and a link can be used to obtain the same data presented in a pdf or excel file, by implicitly calling the same controller with different views (pdf.php or xls.php views).</p>
+<ul>
+<li>A controller is always a file with the extension .php</li>
+<li>An html view has the extension .phtml</li>
+<li>All other types of view have the desired extension (relative to the type) followed by .php</li>
+</ul>
+<h3 id="some-autoload-functions">Some autoload functions</h3>
+<p>MMF provides 2 autoload functions which should normally find the classes you use in the <code>libs/</code> and <code>app/models/</code> folders. Note that in the latter, classes will only be found if the tree structure respects the namespaces starting from this directory.</p>
+<p>For <code>libs/</code>, we are more tolerant, as the php libraries found here and there do not always use namespaces and use various naming conventions.</p>
+<p>To find out more about autoloading in MMF, take a look at mmf/autoload.php</p>
+<h3 id="a-private-files-mechanism">A private files mechanism</h3>
+<p>MMF offers a way of creating files that cannot be accessed directly : the '_' prefix.</p>
+<p>As mentioned above, the simple declaration of a controller or view creates a new accessible url. However, you may need to create files for inclusion purposes without wanting them to be directly accessible.</p>
+<p>To do this, simply prefix the file name with a '_' and the file will be ignored by MMF. The same mechanism works for directories, and all files contained in a directory beginning with '_' will be ignored, even if they don't start with a '_'.</p>
+<p>Ex :</p>
+<div class="highlight"><pre><span></span><code>app/controllers/admin/
+                     index.php    ← check that you are authenticated and have the appropriate rights
+                                    and include the requested controller in the url
+                     _console.php ← a management console
+                     _add.php     ← to add an item
+                     _modify.php  ← to update an item
+                     …
+</code></pre></div>
+<p>The <code>index.php</code> file could look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$actions</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;console&#39;</span><span class="p">,</span><span class="s1">&#39;add&#39;</span><span class="p">,</span><span class="s1">&#39;modify&#39;</span><span class="p">,</span><span class="o">...</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]))</span> <span class="p">{</span>
+   <span class="nv">$user</span> <span class="o">=</span> <span class="nb">unserialize</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]);</span>
+   <span class="k">if</span><span class="p">(</span><span class="nv">$user</span><span class="o">-&gt;</span><span class="na">getProfile</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;administrator&#39;</span><span class="p">){</span>
+      <span class="nv">$action</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nb">in_array</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">],</span> <span class="nv">$actions</span><span class="p">)</span> <span class="o">?</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;action&#39;</span><span class="p">]</span> <span class="o">:</span> <span class="nv">$actions</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+      <span class="k">include</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="nv">$action</span><span class="o">.</span><span class="s2">&quot;.php&quot;</span><span class="p">);</span>
+   <span class="p">}</span>
+   <span class="k">else</span><span class="p">{</span>
+      <span class="nx">MMF</span><span class="o">::</span><span class="na">redirect</span><span class="p">(</span><span class="s1">&#39;/not_authorized&#39;</span><span class="p">)</span> <span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+   <span class="nx">MMF</span><span class="o">::</span><span class="na">redirect</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">)</span> <span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>So the user won't be able to access console.php, add.php or modify.php directly without going through the index, and an attempt to access <code>http://test.mycorp.com/admin/_console</code> will produce a <code>not found</code> error. The file is hidden.</p>
+<p>We could also have grouped the 3 files together in a '_include/' directory, which would have hidden everything underneath (even though the files are not prefixed).</p>
+<div class="admonition tip">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>A file that should not be directly accessible can be hidden if it is prefixed with '_'.</li>
+<li>If a directory starts with a '_', everything below it is hidden.</li>
+</ul>
+</div>
+<h3 id="event-management">Event management</h3>
+<p>Let's imagine that the following file has been included in our controller:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// Callback functions</span>
+<span class="k">function</span> <span class="nf">onAddUser</span><span class="p">(</span><span class="nv">$id</span><span class="p">){</span>
+    <span class="c1">// some actions for other app for example</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+
+<span class="c1">// Register callbacks</span>
+<span class="nx">MMF</span><span class="o">::</span><span class="na">registerListener</span><span class="p">(</span><span class="s2">&quot;addUserEvent&quot;</span><span class="p">,</span> <span class="s2">&quot;onAddUser&quot;</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>So, elsewhere in our processing, we can make a :</p>
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+<span class="c1">//the code for adding a user</span>
+<span class="o">...</span>
+<span class="nx">MMF</span><span class="o">::</span><span class="na">fireEvent</span><span class="p">(</span><span class="s2">&quot;addUserEvent&quot;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="nv">$userId</span><span class="p">));</span>
+</code></pre></div>
+<p>The "onAddUser" function will then be called with the parameters passed as arguments.</p>
+<p>This can make it possible to apply certain treatments that fall outside the scope of our main logic by taking them out of our controller.</p>
+<div class="admonition note">
+<p class="admonition-title">Notes on events</p>
+<ul>
+<li>An event can be registered several times to play several functions.</li>
+<li>You can determine the order in which functions are called (see MMF::registerListener()).</li>
+<li>Callback functions are called during the current execution (no asynchronous mechanism).</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

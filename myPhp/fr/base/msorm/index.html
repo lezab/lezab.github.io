@@ -1,0 +1,1425 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mlib/mautocomplete/">
+      
+      
+        <link rel="next" href="../msolm/">
+      
+      
+        
+          <link rel="alternate" href="../../../en/" hreflang="en">
+        
+          <link rel="alternate" href="../../" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>My Simple ORM - My Php</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#my-simple-orm" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="My Php" class="md-header__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Php
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              My Simple ORM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Php" class="md-nav__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    My Php
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Micro Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../mlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Lib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My Lib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConfig
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MForm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mformvalidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFormValidator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mconsole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConsole
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mcache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mldap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLdap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mmailer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMailer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mmessenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMessenger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mencoderdecoder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEncoderDecoder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlib/mautocomplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAutoComplete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple ORM
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple ORM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Présentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un exemple
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Un exemple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-fichier-descriptionxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le fichier description.xml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ce-qui-est-genere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui est généré
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-sutilise-ce-modele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comment s'utilise ce modèle ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msolm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple OLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Outils
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Outils
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/mcacheviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Cache Viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Présentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un exemple
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Un exemple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-fichier-descriptionxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le fichier description.xml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ce-qui-est-genere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce qui est généré
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-sutilise-ce-modele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comment s'utilise ce modèle ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="my-simple-orm">My Simple ORM</h1>
+<h2 id="presentation">Présentation</h2>
+<p>msorm est un générateur de classes php</p>
+<p>À partir d'un fichier xml qui décrit un modèle relationnel, msorm génère un ensemble de classe php qui représente ce modèle et ses relations. Cet ensemble d'objets php peut être copié dans un projet et est utilisable tel quel, sans qu'aucun autre outil ne soit necessaire.</p>
+<p>En cela, il est différent des autres ORM qui nécessitent d'être intégrés au projet pour pouvoir fonctionner.</p>
+<p>L'avantage est que le modèle généré est très léger, la contrepartie est que si le modèle évolue, il faut le re-générer, mais il existe des options qui rendent les choses très simples.</p>
+<p>Le modèle généré peut être augmenté avec des méthodes supplémentaires que l'on peut écrire.</p>
+<p>L'utlisation du modèle est très facile et rend le code des applications très lisible</p>
+<p>msorm est organisé comme suit :</p>
+<div class="highlight"><pre><span></span><code>msorm/
+<span class="w">  </span>├──<span class="w"> </span>msorm.php
+<span class="w">  </span>├──<span class="w"> </span>generators/
+<span class="w">  </span>│<span class="w">   </span>...
+<span class="w">  </span>│<span class="w">   </span>...
+<span class="w">  </span>└──<span class="w"> </span>projects/
+<span class="w">        </span>├──<span class="w"> </span>myproject_1/
+<span class="w">        </span>│<span class="w">    </span>└──<span class="w"> </span>description.xml
+<span class="w">        </span>└──<span class="w"> </span>myproject_2/
+<span class="w">             </span>└──<span class="w"> </span>description.xml
+</code></pre></div>
+<p>Pour un projet donné, on doit donc créer un fichier description.xml (voir <a href="#xmlfile">ici</a>) et lancer en ligne de commande (le fichier msorm.php soit avoir les droits d'exécution):</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>./msorm.php<span class="w"> </span>-g<span class="w"> </span>model<span class="w"> </span>-p<span class="w"> </span>myproject
+</code></pre></div>
+<p>Cette commande est la plus basique. Elle va prendre le fichier <code>description.xml</code> qui se trouve dans le sous-dossier <code>myproject/</code> du dossier <code>projects/</code>, et créer au même niveau, un dossier <code>model/</code> qui contient l'ensemble des fichiers php générés.</p>
+<p>Il existe plusieurs options. Notamment :</p>
+<ul>
+<li><strong>-g</strong> (ou --generate) : doit être suivie de <code>model</code> ou <code>sql</code><br />
+En effet msorm peut générer un fichier sql (au même endroit que le fichier description.xml) qui permet de créer la base de données</li>
+<li><strong>-o</strong> (ou --output) : permet de spécifier un autre dossier de destination que le sous-dossier <code>model/</code></li>
+<li><strong>-u</strong> (ou --update) : permet de ne pas écraser le code additionnel qui aurait été écrit</li>
+<li><strong>-h</strong> (ou -? ou --help) : affiche une aide qui résume toutes les options</li>
+</ul>
+<p><a id="xmlfile"></a></p>
+<h2 id="un-exemple">Un exemple</h2>
+<h3 id="le-fichier-descriptionxml">Le fichier description.xml</h3>
+<p>msorm est livré avec un projet <code>sample</code> qui est un peu un cas d'école des possibilités de l'outil.<br />
+Les différents types de relations y sont abordées.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;database</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bookstore&quot;</span><span class="w"> </span><span class="na">phpNamespace=</span><span class="s">&quot;bookstore&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;books&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;Book&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">autoIncrement=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;title&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;256&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;publishers&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;Publisher&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">autoIncrement=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;128&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;publications&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;Publication&quot;</span><span class="w"> </span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Ne peut pas être une crossref table parce que le même editeur peut editer plusieurs fois le même livre avec des isbn différents --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;isbn&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;20&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;book_id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Many to One : Une publication ne concerne qu&#39;un seul livre. Un livre peut avoir plusieurs publications (plusieurs publications peuvent concerner le même livre --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;reference</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;books&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">deleteCascade=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/column&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;publisher_id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Many to One : Une publication ne concerne qu&#39;un seul editeur. Un éditeur peut avoir plusieurs publications --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;reference</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;publishers&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">deleteCascade=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/column&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;publication_date&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;date&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;publication_notes&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;200&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contributors&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;Contributor&quot;</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">autoIncrement=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;gender&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;enum&quot;</span><span class="w"> </span><span class="na">values=</span><span class="s">&quot;man,woman&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;first_name&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;128&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;last_name&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;128&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contribution_types&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;ContributionType&quot;</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">autoIncrement=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;128&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;description&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;256&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contributions&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;Contribution&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Ne peut pas être une crossref table parce que le même contributeur peut contribuer plusieurs fois au même livre avec des types de contributions différents (voir plus bas) --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;book_id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Many to One : On peut avoir plusieurs contributions à un même livre. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;reference</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;books&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/column&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contributor_id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Many to One : Un contributeur peut contribuer à plusieurs livres. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;reference</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;contributors&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/column&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contribution_type_id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Est clé primaire pour pouvoir enregistrer plusieurs contributions d&#39;un même contributeur au même ouvrage. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;reference</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;contribution_types&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/column&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;covers&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;Cover&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;isbn&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;20&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- One to One : Une publication n&#39;a qu&#39;une et une seule couverture. Ici filename aurait pu être ajouté à publication, mais c&#39;est pour l&#39;exemple. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;reference</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;publications&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;isbn&quot;</span><span class="w"> </span><span class="na">deleteCascade=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/column&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;filename&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;distributors&quot;</span><span class="w"> </span><span class="na">phpObjectName=</span><span class="s">&quot;Distributor&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">autoIncrement=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;128&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">unique=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;country&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;256&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;address&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;256&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;zipcode&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;256&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;city&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;256&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;table</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;distributions&quot;</span><span class="w"> </span><span class="na">isCrossRef=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">phpExtraAttributesPrefix=</span><span class="s">&quot;distribution&quot;</span><span class="nt">&gt;</span><span class="w">  </span><span class="cm">&lt;!-- Many to Many --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;isbn&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;varchar&quot;</span><span class="w"> </span><span class="na">size=</span><span class="s">&quot;20&quot;</span><span class="w">  </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;reference</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;publications&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;isbn&quot;</span><span class="w"> </span><span class="na">deleteCascade=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/column&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;distributor_id&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="w"> </span><span class="na">unsigned=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">primaryKey=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;reference</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;distributors&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">deleteCascade=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/column&gt;</span>
+<span class="w">        </span><span class="nt">&lt;column</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;price&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/table&gt;</span>
+
+<span class="nt">&lt;/database&gt;</span>
+</code></pre></div>
+<h3 id="ce-qui-est-genere">Ce qui est généré</h3>
+<div class="highlight"><pre><span></span><code>model/
+└── bookstore/                   --&gt; reprend le phpNamespace indiqué
+    ├── Book.php                       |
+    ├── BooksManager.php               |
+    ├── Contribution.php               |
+    ├── ContributionType.php           |
+    ├── ContributionTypesManager.php   |
+    ├── ContributionsManager.php       |
+    ├── Contributor.php                |
+    ├── ContributorsManager.php        |
+    ├── Cover.php                      |--&gt; ici les classes qu&#39;on utlisera dans notre code
+    ├── CoversManager.php              |    Ce sont des classes vides qui héritent de leur
+    ├── Distributor.php                |    équivalent &quot;core&quot;
+    ├── DistributorsManager.php        |
+    ├── Publication.php                |
+    ├── PublicationsManager.php        |
+    ├── Publisher.php                  |
+    ├── PublishersManager.php          |
+    ├── RawDatasManager.php            |
+    ├── core/
+    │   ├── BookCore.php                        | 
+    │   ├── BooksManagerCore.php                |
+    │   ├── ContributionCore.php                |--&gt; ici les classes &quot;core&quot; qui contiennent le code
+    │   ├── ContributionTypeCore.php            |    utile pour manipuler nos objets
+    │   ├── ContributionTypesManagerCore.php    |
+    │   ├── ContributionsManagerCore.php        |
+    │   ├── ContributorCore.php                 |
+    │   ├── ContributorsManagerCore.php         |
+    │   ├── CoverCore.php                       |
+    │   ├── CoversManagerCore.php               |
+    │   ├── DatabaseConnectionProvider.php      |
+    │   ├── DistributorCore.php                 |
+    │   ├── DistributorsManagerCore.php         |
+    │   ├── MSORM.php                           |
+    │   ├── PublicationCore.php                 |
+    │   ├── PublicationsManagerCore.php         |
+    │   ├── PublisherCore.php                   |
+    │   ├── PublishersManagerCore.php           |
+    │   ├── RawDatasManagerCore.php             |
+    │   └── __db_params.conf.php          --&gt; un fichier pour paramétrer la connexion à la base
+    └── exceptions/
+        ├── BookException.php                           |
+        ├── BooksManagerException.php                   |
+        ├── ContributionException.php                   |
+        ├── ContributionTypeException.php               |
+        ├── ContributionTypesManagerException.php       |
+        ├── ContributionsManagerException.php           |
+        ├── ContributorException.php                    |
+        ├── ContributorsManagerException.php            |
+        ├── CoverException.php                          |--&gt; les classes d&#39;exceptions
+        ├── CoversManagerException.php                  |
+        ├── DatabaseConnectionProviderException.php     |
+        ├── DistributorException.php                    |
+        ├── DistributorsManagerException.php            |
+        ├── PublicationException.php                    |
+        ├── PublicationsManagerException.php            |
+        ├── PublisherException.php                      |
+        ├── PublishersManagerException.php              |
+        └── RawDatasManagerException.php                |
+</code></pre></div>
+<ul>
+<li>Chaque table définie dans le fichier xml donne deux classes <strong>sauf les tables crossRef</strong></li>
+<li>Pour chaque table qui donne une classe, on définit l'attribut <code>phpObjectName</code> qui sera le nom de la classe<ul>
+<li>on peut aussi définir l'attribut <code>phpObjectPFName</code> si le pluriel n'est pas formé en ajoutant simplement un "s". 'PF' est pour 'plural form'. Cette forme est utilisée pour générer le nom du manager et des méthodes qui servent à récupérer des attributs dans des relations "many".</li>
+</ul>
+</li>
+<li>On voit qu'il existe une classe supplémentaire <code>RawDatasManager</code>. C'est une classe qui peut permettre de faire des manipulations directes sans passer par le coté objet.</li>
+</ul>
+<h3 id="comment-sutilise-ce-modele">Comment s'utilise ce modèle ?</h3>
+<p>Le principe est toujours le même, mais les classes générées contiennent un code et des attributs qui dépendent vraiment du fichier xml de définition.</p>
+<p>Exemple :<br />
+<div class="highlight"><pre><span></span><code><span class="nv">$books_manager</span> <span class="o">=</span> <span class="nx">bookstore\BooksManager</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+
+<span class="nv">$books</span> <span class="o">=</span> <span class="nv">$books_manager</span><span class="o">-&gt;</span><span class="na">getFilteredList</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;My Book&#39;</span><span class="p">));</span>
+
+<span class="nv">$myBook</span> <span class="o">=</span> <span class="nv">$books</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// on suppose qu&#39;il y en a un et un seul</span>
+
+<span class="k">echo</span> <span class="nv">$myBook</span><span class="o">-&gt;</span><span class="na">getId</span><span class="p">()</span><span class="o">.</span><span class="s2">&quot; : &quot;</span><span class="nv">$myBook</span><span class="o">-&gt;</span><span class="na">getTitle</span><span class="p">()</span><span class="o">.</span><span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="k">foreach</span><span class="p">(</span><span class="nv">$myBook</span><span class="o">-&gt;</span><span class="na">getContributions</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$contribution</span><span class="p">){</span>
+    <span class="nv">$contributor_id</span> <span class="o">=</span> <span class="nv">$contribution</span><span class="o">-&gt;</span><span class="na">getContributorId</span><span class="p">();</span>
+    <span class="nv">$contributor</span> <span class="o">=</span> <span class="nv">$contribution</span><span class="o">-&gt;</span><span class="na">getContributor</span><span class="p">();</span>
+    <span class="nv">$type</span> <span class="o">=</span> <span class="nv">$contribution</span><span class="o">-&gt;</span><span class="na">getContributionType</span><span class="p">();</span>
+
+    <span class="k">echo</span> <span class="s2">&quot;    &quot;</span><span class="o">.</span><span class="nv">$contributor</span><span class="o">-&gt;</span><span class="na">getLastName</span><span class="p">()</span><span class="o">.</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="nv">$contributor</span><span class="o">-&gt;</span><span class="na">getFisrtName</span><span class="p">()</span><span class="o">.</span><span class="s2">&quot; (&quot;</span><span class="o">.</span><span class="nv">$contributor_id</span><span class="o">.</span><span class="s2">&quot;) : &quot;</span><span class="o">.</span><span class="nv">$type</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">()</span><span class="o">.</span><span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$myBook</span><span class="o">-&gt;</span><span class="na">setTitle</span><span class="p">(</span><span class="s1">&#39;My new title&#39;</span><span class="p">);</span>
+<span class="nv">$books_manager</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="nv">$myBook</span><span class="p">);</span>      <span class="c1">// écrit en base de données</span>
+</code></pre></div></p>
+<p>Dans l'exemple ci-dessus on voit que pour chaque "objet" défini en xml, on a deux classes php : une classe "Object" et une classe "ObjectsManager".</p>
+<ul>
+<li>La première représente des objets correspondants aux lignes des tables, avec pour attributs, les colonnes (avec leurs getteurs et setteurs), mais aussi les objets issus des relations définies (reference)</li>
+<li>La deuxième est une classe qui permet de gérer ces objets : obtenir un ou plusieurs objets, en vérifier l'existence, en ajouter, en supprimer ou les mettre à jour.</li>
+</ul>
+<p>Comme évoqué plus haut, ces deux classes héritent de leurs équivalents "core" qui contiennent tous les attributs et méthodes fournies par défaut.</p>
+<p>Ces deux classes peuvent donc tout à fait être enrichies d'autres attributs ou méthodes qui vous manqueraient. Particulièrement la méthode getFilteredList() des managers est assez limitée dans ses possibilités de filtrage justement, et on peut avoir besoin d'écrire une méthode pour extraire certains objets spécifiques.</p>
+<p>Les relations entre objets sont prises en comptes lors des ajouts, mises à jour ou suppressions, de sorte que plusieurs objets peuvent être créés, mis à jour ou supprimés en base de données en une seule instruction.</p>
+<p><br /></p>
+<p>Dans cet exemple $book et $publisher vont être créés à la volée en base de données :<br />
+<div class="highlight"><pre><span></span><code><span class="nv">$publication_manager</span> <span class="o">=</span> <span class="nx">bookstore\PublicationsManager</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+
+<span class="nv">$book</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bookstore\Book</span><span class="p">();</span>
+<span class="nv">$book</span><span class="o">-&gt;</span><span class="na">setTitle</span><span class="p">(</span><span class="s2">&quot;My book&quot;</span><span class="p">);</span>
+
+<span class="nv">$publisher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\bookstore\Publisher</span><span class="p">();</span>
+<span class="nv">$publisher</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s2">&quot;Casterman&quot;</span><span class="p">);</span>
+
+<span class="nv">$publication</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bookstore\Publication</span><span class="p">();</span>
+<span class="nv">$publication</span><span class="o">-&gt;</span><span class="na">setIsbn</span><span class="p">(</span><span class="s2">&quot;123456789&quot;</span><span class="p">);</span>
+<span class="nv">$publication</span><span class="o">-&gt;</span><span class="na">setBook</span><span class="p">(</span><span class="nv">$book</span><span class="p">);</span>
+<span class="nv">$publication</span><span class="o">-&gt;</span><span class="na">setPublisher</span><span class="p">(</span><span class="nv">$publisher</span><span class="p">);</span>
+
+<span class="k">try</span><span class="p">{</span>
+    <span class="nv">$publication_manager</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$publication</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="p">(</span><span class="nx">\Exception</span> <span class="nv">$e</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Il en serait de même pour l'appel à la méthode update.<br />
+Si on continue l'exemple précédent, l'objet $cover serait ajouté à la volée :</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$cover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bookstore\Cover</span><span class="p">();</span>
+<span class="nv">$cover</span><span class="o">-&gt;</span><span class="na">setFilename</span><span class="p">(</span><span class="s2">&quot;123456789.jpg&quot;</span><span class="p">)</span>
+
+<span class="nv">$publication</span> <span class="o">=</span> <span class="nv">$publication_manager</span><span class="o">-&gt;</span><span class="na">getByIsbn</span><span class="p">(</span><span class="s2">&quot;123456789&quot;</span><span class="p">);</span>
+<span class="nv">$publication</span><span class="o">-&gt;</span><span class="na">setCover</span><span class="p">(</span><span class="nv">$cover</span><span class="p">);</span>
+<span class="k">try</span><span class="p">{</span>
+    <span class="nv">$publication_manager</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="nv">$publication</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">catch</span><span class="p">(</span><span class="nx">\Exception</span> <span class="nv">$e</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Dans le fichier xml, les références aux tables books et publishers dans la table des publications sont définies avec l'attribut <code>deleteCascade=true</code>. Ainsi si on supprime un livre (idem un editeur), toutes les publications de ce livre (de cet éditeur) seraient supprimées. </p>
+<div class="highlight"><pre><span></span><code><span class="nv">$books_manager</span> <span class="o">=</span> <span class="nx">bookstore\BooksManager</span><span class="o">::</span><span class="na">getInstance</span><span class="p">();</span>
+
+<span class="nv">$books</span> <span class="o">=</span> <span class="nv">$books_manager</span><span class="o">-&gt;</span><span class="na">getFilteredList</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;My Book&#39;</span><span class="p">));</span>
+<span class="nv">$myBook</span> <span class="o">=</span> <span class="nv">$books</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// on suppose qu&#39;il y en a un et un seul</span>
+
+<span class="nv">$books_manager</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="nv">$myBook</span><span class="p">);</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

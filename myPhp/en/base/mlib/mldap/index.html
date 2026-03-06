@@ -1,0 +1,1708 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mcache/">
+      
+      
+        <link rel="next" href="../mmailer/">
+      
+      
+        
+          <link rel="alternate" href="../../../" hreflang="en">
+        
+          <link rel="alternate" href="../../../../fr/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>MLdap - My Php</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mldap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="My Php" class="md-header__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Php
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MLdap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../fr/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Php" class="md-nav__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    My Php
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Micro Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Lib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My Lib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConfig
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MForm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mformvalidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFormValidator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mconsole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConsole
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLdap
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLdap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-the-ldap-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection to the LDAP server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching-for-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching for entries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Searching for entries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-with-filters-and-specific-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search with filters and specific attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-an-entry-by-its-dn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieve an entry by its DN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing entries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing entries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-an-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add an entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-an-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify an entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-an-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete an entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-multi-valued-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing multi-valued attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing multi-valued attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-values-to-an-existing-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add values to an existing attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-values-from-an-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete values from an attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-with-the-modify-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison with the modify method
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-binary-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling binary attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling binary attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-a-binary-attribute-like-a-photo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieve a binary attribute (like a photo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmailer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMailer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmessenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMessenger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mencoderdecoder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEncoderDecoder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mautocomplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAutoComplete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../msorm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple ORM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../msolm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple OLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/mcacheviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Cache Viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-the-ldap-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection to the LDAP server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching-for-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching for entries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Searching for entries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple search
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-with-filters-and-specific-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search with filters and specific attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-an-entry-by-its-dn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieve an entry by its DN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing entries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing entries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-an-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add an entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-an-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify an entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-an-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete an entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-multi-valued-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing multi-valued attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing multi-valued attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-values-to-an-existing-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add values to an existing attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-values-from-an-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete values from an attribute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-with-the-modify-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison with the modify method
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-binary-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling binary attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling binary attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-a-binary-attribute-like-a-photo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieve a binary attribute (like a photo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mldap">MLdap</h1>
+<h2 id="overview">Overview</h2>
+<p>MLdap is an object-oriented wrapper for native PHP LDAP functions. It simplifies access and manipulation of LDAP directories by providing a more intuitive interface than PHP's native functions.</p>
+<p>This class allows you to:<br />
+- Connect to an LDAP server<br />
+- Perform searches with filters<br />
+- Add, modify, and delete entries and attributes<br />
+- Manage user authentication<br />
+- Handle binary attributes</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>The PHP LDAP extension must be installed and enabled</li>
+</ul>
+<h2 id="connection-to-the-ldap-server">Connection to the LDAP server</h2>
+<div class="highlight"><pre><span></span><code><span class="k">use</span> <span class="nx">mlib\net\ldap\MLdap</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">mlib\net\ldap\MLdapException</span><span class="p">;</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="c1">// Anonymous connection</span>
+    <span class="nv">$ldap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MLdap</span><span class="p">(</span><span class="s1">&#39;ldap.mydomain.com&#39;</span><span class="p">);</span>
+
+    <span class="c1">// Or with authentication</span>
+    <span class="nv">$ldap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MLdap</span><span class="p">(</span>
+        <span class="s1">&#39;ldap.mydomain.com&#39;</span><span class="p">,</span> <span class="c1">// LDAP server</span>
+        <span class="mi">389</span><span class="p">,</span>                   <span class="c1">// Port (default: 389)</span>
+        <span class="s1">&#39;cn=admin,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="c1">// User DN</span>
+        <span class="s1">&#39;password&#39;</span>           <span class="c1">// Password</span>
+    <span class="p">);</span>
+
+    <span class="c1">// Set the default search base</span>
+    <span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">setDefaultBase</span><span class="p">(</span><span class="s1">&#39;ou=users,dc=mydomain,dc=com&#39;</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">MLdapException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;LDAP connection error: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="searching-for-entries">Searching for entries</h2>
+<h3 id="simple-search">Simple search</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Search for all users</span>
+<span class="nv">$results</span> <span class="o">=</span> <span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">search</span><span class="p">(</span><span class="s1">&#39;(objectClass=person)&#39;</span><span class="p">);</span>
+
+<span class="c1">// Display results</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$results</span> <span class="k">as</span> <span class="nv">$i</span> <span class="o">=&gt;</span> <span class="nv">$entry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">===</span> <span class="s1">&#39;count&#39;</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;DN: &quot;</span> <span class="o">.</span> <span class="nv">$entry</span><span class="p">[</span><span class="s1">&#39;dn&#39;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Name: &quot;</span> <span class="o">.</span> <span class="nv">$entry</span><span class="p">[</span><span class="s1">&#39;cn&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Email: &quot;</span> <span class="o">.</span> <span class="p">(</span><span class="nv">$entry</span><span class="p">[</span><span class="s1">&#39;mail&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;Not defined&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="search-with-filters-and-specific-attributes">Search with filters and specific attributes</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Search only names and emails of users whose name starts with &#39;Dupont&#39;</span>
+<span class="nv">$filter</span> <span class="o">=</span> <span class="s1">&#39;(&amp;(objectClass=person)(sn=Dupont*))&#39;</span><span class="p">;</span>
+<span class="nv">$attributes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cn&#39;</span><span class="p">,</span> <span class="s1">&#39;mail&#39;</span><span class="p">];</span>
+<span class="nv">$results</span> <span class="o">=</span> <span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">search</span><span class="p">(</span><span class="nv">$filter</span><span class="p">,</span> <span class="nv">$attributes</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="retrieve-an-entry-by-its-dn">Retrieve an entry by its DN</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">$user</span> <span class="o">=</span> <span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cn&#39;</span><span class="p">,</span> <span class="s1">&#39;mail&#39;</span><span class="p">,</span> <span class="s1">&#39;telephoneNumber&#39;</span><span class="p">]);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$user</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Full name: &quot;</span> <span class="o">.</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;cn&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;Email: &quot;</span> <span class="o">.</span> <span class="nv">$user</span><span class="p">[</span><span class="s1">&#39;mail&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="managing-entries">Managing entries</h2>
+<h3 id="add-an-entry">Add an entry</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">$new_user</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;objectClass&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;inetOrgPerson&#39;</span><span class="p">,</span> <span class="s1">&#39;organizationalPerson&#39;</span><span class="p">,</span> <span class="s1">&#39;person&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;cn&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;John Dupont&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;sn&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;Dupont&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;givenName&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;John&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;mail&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;john.dupont@example.com&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;userPassword&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">],</span> <span class="c1">// Password must be encoded according to LDAP schema specifications</span>
+    <span class="s1">&#39;uid&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;jdupont&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="nv">$new_user</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="modify-an-entry">Modify an entry</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Modify email and add a phone number</span>
+<span class="nv">$modifications</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;mail&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;new.email@example.com&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;telephoneNumber&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;+33123456789&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">modify</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="nv">$modifications</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="delete-an-entry">Delete an entry</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="managing-multi-valued-attributes">Managing multi-valued attributes</h3>
+<h4 id="add-values-to-an-existing-attribute">Add values to an existing attribute</h4>
+<p>The <code>modifyAdd</code> method allows adding values to a multi-valued attribute without overwriting existing values.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Add additional email addresses to a user</span>
+<span class="nv">$additions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;mail&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;john.dupont@domain.fr&#39;</span><span class="p">,</span> <span class="s1">&#39;j.dupont@company.com&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">modifyAdd</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="nv">$additions</span><span class="p">);</span>
+
+<span class="c1">// Add multiple phone numbers</span>
+<span class="nv">$numbers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;telephoneNumber&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;+33123456789&#39;</span><span class="p">,</span> <span class="s1">&#39;+33612345678&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">modifyAdd</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="nv">$numbers</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="delete-values-from-an-attribute">Delete values from an attribute</h4>
+<p>The <code>modifyDel</code> method allows deleting specific values from a multi-valued attribute.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Delete a specific email address</span>
+<span class="nv">$deletions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;mail&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;old.email@example.com&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">modifyDel</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="nv">$deletions</span><span class="p">);</span>
+
+<span class="c1">// Delete multiple phone numbers</span>
+<span class="nv">$deletions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;telephoneNumber&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;+33123456789&#39;</span><span class="p">,</span> <span class="s1">&#39;+33612345678&#39;</span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">modifyDel</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="nv">$deletions</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="comparison-with-the-modify-method">Comparison with the modify method</h4>
+<p>It's important to note the difference between <code>modify</code> and <code>modifyAdd</code>/<code>modifyDel</code>:</p>
+<ul>
+<li><code>modify</code>: Completely replaces attribute values</li>
+<li><code>modifyAdd</code>: Adds values to an existing attribute</li>
+<li><code>modifyDel</code>: Deletes specific values from an attribute</li>
+</ul>
+<p>Example of difference:<br />
+<div class="highlight"><pre><span></span><code><span class="c1">// Suppose the &#39;mail&#39; attribute contains: [&#39;user@example.com&#39;, &#39;user@domain.com&#39;]</span>
+
+<span class="c1">// With modify (replaces all values)</span>
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">modify</span><span class="p">(</span><span class="s1">&#39;uid=user,dc=example,dc=com&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;mail&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;new@example.com&#39;</span><span class="p">]]);</span>
+<span class="c1">// Result: mail = [&#39;new@example.com&#39;]</span>
+
+<span class="c1">// With modifyAdd (adds values)</span>
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">modifyAdd</span><span class="p">(</span><span class="s1">&#39;uid=user,dc=example,dc=com&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;mail&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;other@example.com&#39;</span><span class="p">]]);</span>
+<span class="c1">// Result: mail = [&#39;user@example.com&#39;, &#39;user@domain.com&#39;, &#39;other@example.com&#39;]</span>
+</code></pre></div></p>
+<h2 id="user-authentication">User authentication</h2>
+<h3 id="authentication-configuration">Authentication configuration</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Configure authentication parameters</span>
+<span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">setAuthParameters</span><span class="p">(</span>
+    <span class="s1">&#39;uid&#39;</span><span class="p">,</span>  <span class="c1">// Attribute used for authentication (usually &#39;uid&#39; or &#39;sAMAccountName&#39;)</span>
+    <span class="s1">&#39;ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span>  <span class="c1">// Search base</span>
+    <span class="s1">&#39;(objectClass=person)&#39;</span>  <span class="c1">// Optional filter to restrict authorized users</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="verify-credentials">Verify credentials</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">$login</span> <span class="o">=</span> <span class="s1">&#39;jdupont&#39;</span><span class="p">;</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="s1">&#39;password&#39;</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">authenticate</span><span class="p">(</span><span class="nv">$login</span><span class="p">,</span> <span class="nv">$password</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Authentication successful!&quot;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;Authentication failed&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="handling-binary-attributes">Handling binary attributes</h2>
+<h3 id="retrieve-a-binary-attribute-like-a-photo">Retrieve a binary attribute (like a photo)</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">$photo</span> <span class="o">=</span> <span class="nv">$ldap</span><span class="o">-&gt;</span><span class="na">getBinaryAttribute</span><span class="p">(</span><span class="s1">&#39;uid=jdupont,ou=users,dc=mydomain,dc=com&#39;</span><span class="p">,</span> <span class="s1">&#39;jpegPhoto&#39;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$photo</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nb">file_put_contents</span><span class="p">(</span><span class="s1">&#39;photo.jpg&#39;</span><span class="p">,</span> <span class="nv">$photo</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.expand", "navigation.top", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

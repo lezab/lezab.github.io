@@ -1,0 +1,1802 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mconfig/">
+      
+      
+        <link rel="next" href="../mformvalidator/">
+      
+      
+        
+          <link rel="alternate" href="../../../" hreflang="en">
+        
+          <link rel="alternate" href="../../../../fr/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>MForm - My Php</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mform" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="My Php" class="md-header__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Php
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MForm
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../fr/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Php" class="md-nav__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    My Php
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Micro Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Lib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My Lib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConfig
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MForm
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MForm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The configuration file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        number
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        password
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        checkbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        radio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        datetime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        complex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        custom
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-options-block-for-the-select-checkbox-and-radio-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "options" block for the select, checkbox and radio types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extras
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fieldsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fieldsets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-and-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submit and action
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mformvalidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFormValidator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mconsole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConsole
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mldap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLdap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmailer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMailer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mmessenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMessenger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mencoderdecoder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEncoderDecoder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mautocomplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAutoComplete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../msorm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple ORM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../msolm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple OLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/mcacheviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Cache Viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The configuration file
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        email
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        number
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        password
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        checkbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        radio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        datetime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        complex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        custom
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-options-block-for-the-select-checkbox-and-radio-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "options" block for the select, checkbox and radio types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extras
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fieldsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fieldsets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-and-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submit and action
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mform">MForm</h1>
+<h2 id="overview">Overview</h2>
+<p>MForm is a PHP class for displaying forms from a configuration file that is easier to write than the generated HTML and offers many built-in features.</p>
+<p>With a php code like this :</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$form</span> <span class="o">=</span> <span class="nx">mlib\ui\form\MFormFactory</span><span class="o">::</span><span class="na">createFromFile</span><span class="p">(</span><span class="no">__DIR__</span><span class="o">.</span><span class="s2">&quot;/path/to/form.conf&quot;</span><span class="p">);</span>
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">registerAssetsPath</span><span class="p">(</span><span class="s2">&quot;path/to/assets_libs/mlib/MForm/&quot;</span><span class="p">);</span>
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">display</span><span class="p">();</span>
+</code></pre></div>
+<p>and a "form.conf" file (see <a href="#config_file">below</a>), here's the kind of form that can be created :<br />
+<img alt="" src="../../../../assets/images/mform_1.png" /></p>
+<p>As we can see, these are simple vertical forms, but MForm provides access to several features such as combined fields, multiple fields, help buttons, and more, as we will see.</p>
+<p>The configuration file that allowed this form to be generated : <a href="../../../../assets/files/form.conf">mform_sample.conf</a></p>
+<p><a id="config_file"></a></p>
+<h2 id="the-configuration-file">The configuration file</h2>
+<p>The configuration files for MForm are MConfig files (see <a href="../mconfig/">here</a>).</p>
+<p>They consist of a succession of blocks like this :</p>
+<div class="highlight"><pre><span></span><code>&lt;form_field_name&gt;
+   type = the_type
+   display = the_label
+   ...
+   ...
+&lt;/form_field_name&gt;
+</code></pre></div>
+<p>Common parameters, whatever the type :</p>
+<p>Required :</p>
+<ul>
+<li>type : one of the values : hidden, input, number, email, password, text, checkbox, radio, select, file, date, datetime, time, complex, custom</li>
+<li>display : the label to be displayed next to the form field</li>
+</ul>
+<p>Optional :</p>
+<ul>
+<li>required (bool) : indicates if the field is required or not</li>
+<li>disabled (bool) : indicates if the field is disabled or not. Only taken into account if the form is in edit mode</li>
+<li>help : a URL that returns the help content for the field, which will be loaded via AJAX in a modal box</li>
+<li>default_value : a default value</li>
+</ul>
+<p>Depending on the type specified, a certain number of other directives will be required or optional.</p>
+<h3 id="input">input</h3>
+<p>The type input corresponds to an input type text in html. It is a simple one-line text field.</p>
+<p>Optional parameters :</p>
+<ul>
+<li>width : allows to specify a width in pixels</li>
+<li>placeholder : allows to put an indication in filigrane when the field is empty</li>
+<li>multi (bool) : allows the user to specify multiple values by adding lines thanks to a "+" to the right of the field</li>
+</ul>
+<h3 id="email">email</h3>
+<p>Same as type input, but the html type will be email. There will be no difference if the browser validation is disabled (see <a href="#browservalidation">here</a>)</p>
+<h3 id="number">number</h3>
+<p>The type number corresponds to an input type number in html.</p>
+<p>Optional parameters :</p>
+<ul>
+<li>width : allows to specify a width in pixels</li>
+<li>placeholder : allows to put an indication in filigrane when the field is empty</li>
+<li>multi (bool) : allows the user to specify multiple values by adding lines thanks to a "+" to the right of the field</li>
+<li>step :</li>
+<li>min :</li>
+<li>max : </li>
+</ul>
+<h3 id="password">password</h3>
+<p>The type password corresponds to an input type password in html.</p>
+<p>Optional parameters :</p>
+<ul>
+<li>width : allows to specify a width in pixels</li>
+<li>placeholder : allows to put an indication in filigrane when the field is empty</li>
+</ul>
+<h3 id="text">text</h3>
+<p>The type text corresponds to a textarea in html.</p>
+<p>Required parameters :</p>
+<ul>
+<li>nb_lines : the number of lines of the textarea</li>
+</ul>
+<p>Optional parameters :</p>
+<ul>
+<li>width : allows to specify a width in pixels</li>
+<li>placeholder : allows to put an indication in filigrane when the field is empty</li>
+</ul>
+<h3 id="select">select</h3>
+<p>The type select corresponds to a select in html.</p>
+<p>Required parameters :</p>
+<ul>
+<li>options (config) : a configuration block for the select values (see <a href="#optionsconfig">here</a>)</li>
+</ul>
+<p>Optional parameters :</p>
+<ul>
+<li>width : allows to specify a width in pixels</li>
+<li>multi (bool) : indicates if the select is multiple. The functionality is implemented differently : we switch to checkboxes presented in a dropdown list for a more user-friendly interface than holding down the ctrl key.</li>
+<li>nb_lines : number of visible lines if multi</li>
+</ul>
+<h3 id="checkbox">checkbox</h3>
+<p>The type checkbox corresponds to an input type checkbox in html.</p>
+<p>Required parameters :</p>
+<ul>
+<li>options (config) : a configuration block for the checkbox values (see <a href="#optionsconfig">here</a>)</li>
+</ul>
+<h3 id="radio">radio</h3>
+<p>The type radio corresponds to an input type radio in html.</p>
+<p>Required parameters :</p>
+<ul>
+<li>options (config) : a configuration block for the radio button values (see <a href="#optionsconfig">here</a>)</li>
+</ul>
+<h3 id="date">date</h3>
+<p>The type date corresponds to an input type date. A date picker appears when you click on the field.</p>
+<p>Parameters (all optional):</p>
+<ul>
+<li>format : a string among : <ul>
+<li>'Y-m-d' (default)</li>
+<li>'d-m-Y'</li>
+<li>'Y/m/d'</li>
+<li>'d/m/Y'</li>
+</ul>
+</li>
+<li>min : the minimum accepted date (today if not specified)</li>
+<li>max : the maximum accepted date (today + 1 year if not specified)</li>
+</ul>
+<p>min and max can be dates in the specified format (Y-m-d by default) or well </p>
+<ul>
+<li>Y  or Y &plusmn; N (with N an integer) : the 1st January (min) or the 31st December (max) of the year &plusmn; N years</li>
+<li>M  or M &plusmn; N (with N an integer) : the 1st (min) or last (max) day of the month &plusmn; N months</li>
+<li>D  or D &plusmn; N (with N an integer) : today &plusmn; N days</li>
+</ul>
+<p>Examples : <br />
+  <div class="highlight"><pre><span></span><code>  min = D       # from today
+  max = D+365   # at the horizon of a year
+</code></pre></div><br />
+  <div class="highlight"><pre><span></span><code>  min = Y-1   # the first January of the previous year
+  max = Y+1   # the 31st December of the following year
+</code></pre></div></p>
+<h3 id="datetime">datetime</h3>
+<p>Same as date, but with the options of format :</p>
+<ul>
+<li>'Y-m-d H:i' (default)</li>
+<li>'d-m-Y H:i'</li>
+<li>'Y/m/d H:i'</li>
+<li>'d/m/Y H:i'</li>
+</ul>
+<h3 id="time">time</h3>
+<p>The type time is an hour in 24h format : 00:00 &rarr; 23:59</p>
+<p>No option</p>
+<h3 id="file">file</h3>
+<p>The type file corresponds to an input type file.</p>
+<p>Optional parameters :</p>
+<ul>
+<li>width : allows to specify a width in pixels</li>
+</ul>
+<p>In edit mode, if a value is specified for a field of this type, this value (name of a file) will be displayed in the placeholder of the field as an indication, but the field will be empty if a new file is not loaded by the user. It is not possible to pre-fill an input type file.</p>
+<h3 id="complex">complex</h3>
+<p>The type complex allows to aggregate (to combine) different fields between them.<br />
+Each set of values represents a value of the combined field.</p>
+<p>Required parameters :</p>
+<ul>
+<li>one or more configs of the fields that compose the combined field</li>
+</ul>
+<p>Optional parameters :</p>
+<ul>
+<li>multi (bool) : if we can specify several values of the combined field or not</li>
+</ul>
+<h3 id="custom">custom</h3>
+<p>The type custom allows to make a custom form field (if no other type suits what we want to do).<br />
+For this, we will have to write a php class that inherits from MForm, in which we will write a method charged of displaying the form field. We will indicate the name of this method in a parameter of the field configuration.</p>
+<p>Required parameters :</p>
+<ul>
+<li>function : the name of the method to call to display the field</li>
+</ul>
+<p><a id="optionsconfig"></a></p>
+<h2 id="the-options-block-for-the-select-checkbox-and-radio-types">The "options" block for the select, checkbox and radio types</h2>
+<p>The "options" block must contain the "type" parameter which can take one of the two following values :</p>
+<ul>
+<li>constant : the list of options is always the same. It must be indicated in the block (see below)</li>
+<li>custom : the list of options is dynamic. It will be specified at execution through the setCustomOptions method (see below). We will use this method if the elements of a dropdown list are stored in a database, for example.</li>
+</ul>
+<p>If the type is "constant", it must then specify the 2 following parameters :</p>
+<ul>
+<li>values : the values of the options separated by "/" (Ex : 1/2/3)</li>
+<li>displays : the labels of these options separated by "/" in the same order (Ex : red/green/blue)</li>
+</ul>
+<p>Example of a select with constant options :</p>
+<div class="highlight"><pre><span></span><code>&lt;field_name&gt;
+    type = select
+    display = Choose a value   # what is displayed next to the field, equivalent to a label
+    &lt;options&gt;
+        type = constant
+        values = 1/2/3
+        displays = red/green/blue
+    &lt;/options&gt;
+&lt;/field_name&gt;
+</code></pre></div>
+<p>Example of a select with dynamic options at execution :</p>
+<div class="highlight"><pre><span></span><code>&lt;field_name&gt;
+    type = select
+    display = Choose a value   # what is displayed next to the field, equivalent to a label
+    &lt;options&gt;
+        type = custom
+    &lt;/options&gt;
+&lt;/field_name&gt;
+</code></pre></div>
+<p>Example of using <code>setCustomOptions</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$form</span> <span class="o">=</span> <span class="nx">mlib\ui\form\MFormFactory</span><span class="o">::</span><span class="na">createFromFile</span><span class="p">(</span><span class="no">__DIR__</span><span class="o">.</span><span class="s2">&quot;/path/to/form.conf&quot;</span><span class="p">);</span>
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">registerAssetsPath</span><span class="p">(</span><span class="s2">&quot;path/to/assets_libs/mlib/MForm/&quot;</span><span class="p">);</span>
+
+<span class="nv">$values</span> <span class="o">=</span> <span class="nv">$database</span><span class="o">-&gt;</span><span class="na">getValuesOrderByValues</span><span class="p">();</span> <span class="c1">// for example</span>
+<span class="nv">$labels</span> <span class="o">=</span> <span class="nv">$database</span><span class="o">-&gt;</span><span class="na">getLabelsOrderByValues</span><span class="p">();</span> <span class="c1">// for example</span>
+
+<span class="nv">$form_options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;my_select_with_dynamic_options&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;values&#39;</span> <span class="o">=&gt;</span> <span class="nv">$values</span><span class="p">,</span> <span class="s1">&#39;displays&#39;</span> <span class="o">=&gt;</span> <span class="nv">$labels</span><span class="p">)</span>
+    <span class="c1">// other options for other fields could be set here</span>
+  <span class="p">);</span>
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">setCustomOptions</span><span class="p">(</span><span class="nv">$form_options</span><span class="p">);</span>
+
+<span class="nv">$form</span><span class="o">-&gt;</span><span class="na">display</span><span class="p">();</span>
+</code></pre></div>
+<h2 id="extras">Extras</h2>
+<h3 id="aides">Aides</h3>
+<p>As mentioned above, we can specify a url for each form field to display a help.<br />
+We use the <code>help</code> parameter for this.<br />
+We can also use the <code>help_width</code> and <code>help_height</code> parameters to specify the modal box dimensions.</p>
+<h3 id="fieldsets">Fieldsets</h3>
+<p>We can group form fields into fieldsets simply by enclosing these fields in a named tag <code>fieldset*</code></p>
+<p>The name of the fielset has no value. That is to say, we can give it any name we want, the only constraint being that two fieldsets cannot have the same name.</p>
+<p>Example :<br />
+<div class="highlight"><pre><span></span><code>&lt;fieldset_1&gt;
+    hiddeable
+    display = A Fieldset
+    help = path/to/help_for_fieldset.txt
+
+
+    &lt;field1&gt;
+    ....
+    &lt;/field1&gt;
+    &lt;field2&gt;
+    ...
+    &lt;/field2&gt;
+
+&lt;/fieldset_1&gt;
+</code></pre></div></p>
+<p>We can see here that there are options for fieldsets :<br />
+  * display : the label that will be displayed<br />
+  * hiddeable (boolean): if the fieldset can be collapsed or not<br />
+  * help : see above, same as for a form field</p>
+<h2 id="submit-and-action">Submit and action</h2>
+<p>Outside of all form fields and fieldsets, we can specify the <code>action</code> parameter at the root of the configuration file if the processing url of the form is not the same as the form url.</p>
+<p>We can also specify a special submit block to modify the value of the validation button of the form and/or add a captcha.</p>
+<p>Example:<br />
+<div class="highlight"><pre><span></span><code>&lt;submit&gt;
+    display = Send
+  captcha = path/to/something/which/generate/an/image
+&lt;/submit&gt;
+</code></pre></div></p>
+<p>If there is a captcha, the code that will have generated the image must have stored the code in the session.<br />
+The code entered by the user will be found in the <code>mform_captcha</code> field at form reception.</p>
+<p><a id="browservalidation"></a></p>
+<h2 id="browser-validation">Browser validation</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.expand", "navigation.top", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

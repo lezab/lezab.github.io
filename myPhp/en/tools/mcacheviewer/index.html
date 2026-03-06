@@ -1,0 +1,2038 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+      
+        
+          <link rel="alternate" href="../../" hreflang="en">
+        
+          <link rel="alternate" href="../../../fr/" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>My Cache Viewer - My Php</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mcacheviewer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Php" class="md-header__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Php
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              My Cache Viewer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../fr/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Php" class="md-nav__button md-logo" aria-label="My Php" data-md-component="logo">
+      
+  <img src="../../../assets/images/mylogo.png" alt="logo">
+
+    </a>
+    My Php
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../base/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Micro Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../base/mlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Lib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My Lib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConfig
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MForm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mformvalidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFormValidator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mconsole/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MConsole
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mcache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mldap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLdap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mmailer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMailer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mmessenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MMessenger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mencoderdecoder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEncoderDecoder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/mlib/mautocomplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAutoComplete
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/msorm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple ORM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/msolm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Simple OLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Cache Viewer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My Cache Viewer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view-a-specific-cache-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View a specific cache file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display version
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache File Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a string
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-an-associative-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For an associative array
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-an-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For an object
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application Debugging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Migration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Not Found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrupted-cache-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corrupted Cache File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invalid Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with Other Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Other Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combination-with-grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combination with grep
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combination-with-jq-for-json-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combination with jq (for JSON data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Permission denied
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-empty-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Empty file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-unreadable-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Unreadable data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-and-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version and History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view-a-specific-cache-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View a specific cache file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display version
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache File Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a string
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-an-associative-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For an associative array
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-an-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For an object
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application Debugging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Migration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Not Found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrupted-cache-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corrupted Cache File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invalid Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-other-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with Other Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Other Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combination-with-grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combination with grep
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combination-with-jq-for-json-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combination with jq (for JSON data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Permission denied
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-empty-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Empty file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-unreadable-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem: Unreadable data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-and-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version and History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mcacheviewer">MCacheViewer</h1>
+<h2 id="overview">Overview</h2>
+<p>MCacheViewer is a command-line tool that allows viewing and inspecting the content of cache files created by the MCache class from the mlib library. This tool is particularly useful for debugging and analyzing cached data.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Reading and decoding MCache cache files</li>
+<li>Formatted display of serialized data</li>
+<li>Support for different data types (arrays, objects, strings, etc.)</li>
+<li>Simple and intuitive command-line interface</li>
+<li>Clear error message handling</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>mcacheviewer is structured as follows:</p>
+<div class="highlight"><pre><span></span><code>- mcacheview       &lt;-- bash file
+- mcacheviewer/
+    - mcacheview.php
+</code></pre></div>
+<ol>
+<li>Copy everything to a directory of your choice (for example <code>/usr/local/bin/</code>)</li>
+<li>Make the script executable:<br />
+   <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>/path/to/mcacheviewer/mcacheview
+</code></pre></div></li>
+<li>If the directory is not in your PATH, add it or use the full path</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<h3 id="basic-syntax">Basic Syntax</h3>
+<div class="highlight"><pre><span></span><code>mcacheview<span class="w"> </span>-f<span class="w"> </span>&lt;cache_file&gt;
+</code></pre></div>
+<h3 id="available-options">Available Options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-h</code>, <code>-?</code>, <code>--help</code></td>
+<td>Displays help message</td>
+</tr>
+<tr>
+<td><code>-v</code>, <code>--version</code></td>
+<td>Displays tool version</td>
+</tr>
+<tr>
+<td><code>-f</code>, <code>--file</code></td>
+<td>Specifies the cache file to view</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage-examples">Usage Examples</h3>
+<h4 id="view-a-specific-cache-file">View a specific cache file</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using the bash script</span>
+mcacheview<span class="w"> </span>-f<span class="w"> </span>/var/www/cache/my_key.cache
+
+<span class="c1"># Using PHP directly</span>
+php<span class="w"> </span>/path/to/mcacheviewer/mcacheview.php<span class="w"> </span>-f<span class="w"> </span>/var/www/cache/my_key.cache
+</code></pre></div>
+<h4 id="display-help">Display help</h4>
+<div class="highlight"><pre><span></span><code>mcacheview<span class="w"> </span>-h
+</code></pre></div>
+<h4 id="display-version">Display version</h4>
+<div class="highlight"><pre><span></span><code>mcacheview<span class="w"> </span>-v
+</code></pre></div>
+<h2 id="cache-file-format">Cache File Format</h2>
+<p>MCacheViewer is designed to read cache files generated by the MCache class. These files have the following structure:</p>
+<ul>
+<li><strong>Extension</strong>: <code>.cache</code></li>
+<li><strong>Format</strong>: Data is serialized with <code>serialize()</code>, then base64 encoded</li>
+<li><strong>Content</strong>: A single line containing the encoded data</li>
+</ul>
+<h2 id="output-examples">Output Examples</h2>
+<h3 id="for-a-string">For a string</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mcacheview<span class="w"> </span>-f<span class="w"> </span>/tmp/message.cache
+Hello<span class="w"> </span>world!
+</code></pre></div>
+<h3 id="for-an-associative-array">For an associative array</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mcacheview<span class="w"> </span>-f<span class="w"> </span>/tmp/config.cache
+Array
+<span class="o">(</span>
+<span class="w">    </span><span class="o">[</span>database<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>mysql
+<span class="w">    </span><span class="o">[</span>host<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>localhost
+<span class="w">    </span><span class="o">[</span>port<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="m">3306</span>
+<span class="w">    </span><span class="o">[</span>username<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>admin
+<span class="w">    </span><span class="o">[</span>password<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>*****
+<span class="o">)</span>
+</code></pre></div>
+<h3 id="for-an-object">For an object</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mcacheview<span class="w"> </span>-f<span class="w"> </span>/tmp/user.cache
+User<span class="w"> </span>Object
+<span class="o">(</span>
+<span class="w">    </span><span class="o">[</span>id:User:private<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="m">42</span>
+<span class="w">    </span><span class="o">[</span>name:User:private<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>John<span class="w"> </span>Doe
+<span class="w">    </span><span class="o">[</span>email:User:private<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>john@example.com
+<span class="w">    </span><span class="o">[</span>createdAt:User:private<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="m">2025</span>-01-15<span class="w"> </span><span class="m">10</span>:30:00
+<span class="o">)</span>
+</code></pre></div>
+<h2 id="use-cases">Use Cases</h2>
+<h3 id="application-debugging">Application Debugging</h3>
+<p>MCacheViewer is particularly useful for:<br />
+- Verifying that data is properly cached<br />
+- Inspecting cache content during development<br />
+- Diagnosing corrupted cache problems</p>
+<h3 id="cache-monitoring">Cache Monitoring</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check content of a specific cache</span>
+mcacheview<span class="w"> </span>-f<span class="w"> </span>/var/www/app/cache/user_123.cache
+
+<span class="c1"># Script to check multiple cache files</span>
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>/var/www/app/cache/*.cache<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== </span><span class="nv">$file</span><span class="s2"> ===&quot;</span>
+<span class="w">    </span>mcacheview<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="k">done</span>
+</code></pre></div>
+<h3 id="data-migration">Data Migration</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Export cache content to a readable file</span>
+mcacheview<span class="w"> </span>-f<span class="w"> </span>/tmp/old_cache.cache<span class="w"> </span>&gt;<span class="w"> </span>/tmp/cache_content.txt
+</code></pre></div>
+<h2 id="error-handling">Error Handling</h2>
+<h3 id="file-not-found">File Not Found</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mcacheview<span class="w"> </span>-f<span class="w"> </span>/nonexistent/path.cache
+File<span class="w"> </span>not<span class="w"> </span>found<span class="w"> </span>:<span class="w"> </span>/nonexistent/path.cache
+</code></pre></div>
+<h3 id="corrupted-cache-file">Corrupted Cache File</h3>
+<p>If the cache file is corrupted or not in the expected format, MCacheViewer will display PHP errors related to deserialization.</p>
+<h3 id="invalid-arguments">Invalid Arguments</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mcacheview<span class="w"> </span>--unknown-option
+Unknown<span class="w"> </span>arg<span class="w"> </span>:<span class="w"> </span>unknown-option
+
+mcacheview<span class="w"> </span>v1.0.0
+
+Usage<span class="w"> </span>:
+mcacheview.php<span class="w"> </span>-h
+mcacheview.php<span class="w"> </span>-f<span class="w"> </span>&lt;filename&gt;
+
+&lt;args&gt;<span class="w">  </span>
+<span class="w">    </span>-h,<span class="w"> </span>-?,<span class="w"> </span>--help<span class="w"> </span>:
+
+<span class="w">            </span>leads<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>message
+
+<span class="w">    </span>-v,<span class="w"> </span>--version<span class="w"> </span>:
+
+<span class="w">            </span>Gives<span class="w"> </span>the<span class="w"> </span>version
+
+<span class="w">    </span>-f,<span class="w"> </span>--file<span class="w"> </span>:
+
+<span class="w">        </span>The<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>file<span class="w"> </span>containing<span class="w"> </span>data<span class="w"> </span>from<span class="w"> </span>MCache
+
+<span class="w">    </span>Arguments<span class="w"> </span>with<span class="w"> </span>options<span class="w"> </span>accept<span class="w"> </span>these<span class="w"> </span>formats<span class="w"> </span><span class="o">(</span><span class="s2">&quot;a&quot;</span><span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>short<span class="w"> </span>format<span class="w"> </span>argument,<span class="w"> </span><span class="s2">&quot;aaa&quot;</span><span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>long<span class="w"> </span>format<span class="w"> </span>argument,<span class="w"> </span><span class="s2">&quot;option&quot;</span><span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>option<span class="o">)</span>:
+<span class="w">    </span>-a<span class="w"> </span>option
+<span class="w">    </span>--aaa<span class="w"> </span>option
+<span class="w">    </span>--aaa<span class="o">=</span>option
+</code></pre></div>
+<h2 id="integration-with-other-tools">Integration with Other Tools</h2>
+<h3 id="combination-with-grep">Combination with grep</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Search for a specific value in all cache files</span>
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>/var/www/cache/*.cache<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">result</span><span class="o">=</span><span class="k">$(</span>mcacheview<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;search_term&quot;</span><span class="k">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$result</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Found in </span><span class="nv">$file</span><span class="s2">:&quot;</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$result</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span>
+</code></pre></div>
+<h3 id="combination-with-jq-for-json-data">Combination with jq (for JSON data)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># If cached data is JSON</span>
+mcacheview<span class="w"> </span>-f<span class="w"> </span>/tmp/data.cache<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.key&#39;</span>
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li>
+<p><strong>Permissions</strong>: Ensure the user running MCacheViewer has read permissions on cache files.</p>
+</li>
+<li>
+<p><strong>Security</strong>: Cache files may contain sensitive data. Use MCacheViewer with caution in production environments.</p>
+</li>
+<li>
+<p><strong>Performance</strong>: For large cache files, display may take time. Use tools like <code>head</code> or <code>grep</code> to filter output if necessary.</p>
+</li>
+<li>
+<p><strong>Backup</strong>: Before manipulating cache files, it's recommended to make a copy.</p>
+</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="problem-permission-denied">Problem: Permission denied</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mcacheview<span class="w"> </span>-f<span class="w"> </span>/var/www/cache/test.cache
+Permission<span class="w"> </span>denied
+</code></pre></div>
+<p><strong>Solution</strong>: Check file and directory permissions:<br />
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-la<span class="w"> </span>/var/www/cache/test.cache
+chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>/var/www/cache/test.cache
+</code></pre></div></p>
+<h3 id="problem-empty-file">Problem: Empty file</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mcacheview<span class="w"> </span>-f<span class="w"> </span>/tmp/empty.cache
+</code></pre></div>
+<p><strong>Solution</strong>: The cache file is probably empty or corrupted. Verify that MCache properly wrote the data.</p>
+<h3 id="problem-unreadable-data">Problem: Unreadable data</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mcacheview<span class="w"> </span>-f<span class="w"> </span>/tmp/binary.cache
+&lt;unreadable<span class="w"> </span>binary<span class="w"> </span>data&gt;
+</code></pre></div>
+<p><strong>Solution</strong>: The file is probably not a valid MCache cache file. Verify that the file was created by the MCache class.</p>
+<h2 id="version-and-history">Version and History</h2>
+<ul>
+<li><strong>Current version</strong>: 1.0.0</li>
+<li><strong>Author</strong>: Denis ELBAZ</li>
+<li><strong>License</strong>: GPL v3</li>
+</ul>
+<p>This tool is part of the MyLib ecosystem and is designed to work in complement to the MCache class.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
