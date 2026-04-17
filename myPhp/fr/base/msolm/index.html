@@ -1184,7 +1184,7 @@ Par défaut il contient ce qui est indiqué dans le fichier xml.<br />
 Mais dans le développement d'appications interfacées avec un annuaire ldap, la plupart du temps on utlilise un annuaire existant, pour lequel on a pas choisi les schemas et le nom des attributs (contrairement aux bases de données où la conception de la base fait partie du développement de l'application). C'est pourquoi on offre ici la possibilité de modifier ces noms d'attributs dans un fichier de configuration séparé. Certains attributs peuvent même être laisssés vide si l'annuaire ne dispose pas de l'information<br />
 Exemple<br />
 <div class="highlight"><pre><span></span><code><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="nv">$ldap_base</span> <span class="o">=</span> <span class="s2">&quot;ou=people,dc=univ-perp,dc=fr&quot;</span><span class="p">;</span>
+<span class="nv">$ldap_base</span> <span class="o">=</span> <span class="s2">&quot;ou=people,dc=my-corp,dc=org&quot;</span><span class="p">;</span>
 <span class="nv">$ldap_filter</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">$ldap_attributes_mapping</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
         <span class="s2">&quot;login&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;uid&quot;</span><span class="p">,</span>  
